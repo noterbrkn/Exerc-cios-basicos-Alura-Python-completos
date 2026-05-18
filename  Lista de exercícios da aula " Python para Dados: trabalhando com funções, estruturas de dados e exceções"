@@ -1,0 +1,2224 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/noterbrkn/Exerc-cios-basicos-Alura-Python-completos/blob/main/%20Lista%20de%20exerc%C3%ADcios%20da%20aula%20%22%20Python%20para%20Dados%3A%20trabalhando%20com%20fun%C3%A7%C3%B5es%2C%20estruturas%20de%20dados%20e%20exce%C3%A7%C3%B5es%22\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Sobre o notebook\n",
+        "\n",
+        "A \"hora da prática\" é uma atividade do curso de Python para Data Science da Alura que contém diversos desafios envolvendo os aprendizados de cada aula.\n",
+        "\n",
+        "O notebook \"hora da prática\" é um notebook construído com espaço para as células dos desafios propostos no curso, com ele você tem espaço para construir e executar suas soluções"
+      ],
+      "metadata": {
+        "id": "_kwAaQ36gLQ1"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 1 - Bibliotecas"
+      ],
+      "metadata": {
+        "id": "Mc-KN0dA0Z83"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Aquecimento"
+      ],
+      "metadata": {
+        "id": "Dq02fNPCl_JV"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 1\n",
+        "\n",
+        "Escreva um código para instalar a versão `3.7.1` da biblioteca `matplotlib`"
+      ],
+      "metadata": {
+        "id": "l5eLWf0W0ikn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!pip install matplotlib"
+      ],
+      "metadata": {
+        "id": "m4b6NquSaj3q",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5df0a492-5b44-4ca1-a181-217419b1074d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (3.10.0)\n",
+            "Requirement already satisfied: contourpy>=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (1.3.3)\n",
+            "Requirement already satisfied: cycler>=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (0.12.1)\n",
+            "Requirement already satisfied: fonttools>=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (4.61.1)\n",
+            "Requirement already satisfied: kiwisolver>=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (1.4.9)\n",
+            "Requirement already satisfied: numpy>=1.23 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (2.0.2)\n",
+            "Requirement already satisfied: packaging>=20.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (26.0)\n",
+            "Requirement already satisfied: pillow>=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (11.3.0)\n",
+            "Requirement already satisfied: pyparsing>=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (3.3.2)\n",
+            "Requirement already satisfied: python-dateutil>=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (2.9.0.post0)\n",
+            "Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 2\n",
+        "\n",
+        "Escreva um código para importar a biblioteca `numpy` com o alias `np`"
+      ],
+      "metadata": {
+        "id": "tQdX90Ue03c7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np"
+      ],
+      "metadata": {
+        "id": "Gh8aZUwaakuT"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 3\n",
+        "Crie um programa que lê a seguinte lista de números e escolha um número desta aleatoriamente.\n",
+        "```\n",
+        "lista = [8, 12, 54, 23, 43, 1, 90, 87, 105, 77]\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "gfg-aiip03vC"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from random import choice\n",
+        "lista = [8, 12, 54, 23, 43, 1, 90, 87, 105, 77]\n",
+        "escolha = choice(lista)\n",
+        "escolha"
+      ],
+      "metadata": {
+        "id": "Sla71KJQalws",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "54297a2c-b849-463b-87f6-a30c2f47527b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "87"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 4\n",
+        "\n",
+        "Crie um programa que sorteia aleatoriamente um número inteiro menor que 100.\n",
+        "> Dica: use a função [`randrange()`](https://docs.python.org/3/library/random.html#random.randrange) da biblioteca `random`. Essa função recebe como parâmetro o valor limite para a escolha aleatória ou um intervalo se passado o limite mínimo e máximo. Por exemplo, `randrange(5)` gera valores inteiros menores que 5.\n"
+      ],
+      "metadata": {
+        "id": "oadrJbl704MM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from random import randrange\n",
+        "randrange(100)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "UZSpqpOuanFT",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "68663771-d30a-499f-e761-ad450ff595b4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "81"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 21
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 5\n",
+        "Crie um programa que solicite à pessoa usuária digitar dois números inteiros e calcular a potência do 1º número elevado ao 2º.\n",
+        "> Dica: use a função [`pow()`](https://docs.python.org/3/library/random.html#random.randrange) da biblioteca `math`\n"
+      ],
+      "metadata": {
+        "id": "3RgyMaan04TD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from math import pow\n",
+        "num_1 = int(input('Digite o primeiro número: '))\n",
+        "num_2 = int(input('Digite o segundo número: '))\n",
+        "pot = int(pow(num_1, num_2))\n",
+        "pot"
+      ],
+      "metadata": {
+        "id": "UOzl8la0aoBd",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6e389704-6157-4c23-be88-d64a38384536"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Digite o primeiro número: 5\n",
+            "Digite o segundo número: 2\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "25"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 23
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Aplicando a projetos"
+      ],
+      "metadata": {
+        "id": "ieCkWjvEmJU0"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 6\n",
+        "Um programa deve ser escrito para sortear uma pessoa seguidora de uma rede social para ganhar um prêmio. A lista de participantes é numerada e devemos escolher aleatoriamente um número de acordo com a quantidade de participantes.\n",
+        "\n",
+        "Peça à pessoa usuária para fornecer o número de participantes do sorteio e devolva para ela o número sorteado."
+      ],
+      "metadata": {
+        "id": "0rS4QHP1mXQE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from random import randrange\n",
+        "lista = int(input('Qual o número total de participantes? '))\n",
+        "escolha = randrange(lista)\n",
+        "print(f'O vencedor foi o número {escolha}!')"
+      ],
+      "metadata": {
+        "id": "G4k5jUdAao8t",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4dba8d99-a330-4bf9-9ec2-ffb848b15b75"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Qual o número total de participantes? 100\n",
+            "O vencedor foi o número 5!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 7\n",
+        "\n",
+        "Você recebeu uma demanda para gerar números de token para o acesso ao aplicativo de uma empresa. O token precisa ser par e variar de 1000 até 9998. Escreva um código que solicita à pessoa usuária o seu nome e gera uma mensagem junto a esse token gerado aleatoriamente:\n",
+        "\n",
+        "`\"Olá, [nome], o seu token de acesso é [token]! Seja bem-vindo(a)!\"`"
+      ],
+      "metadata": {
+        "id": "9D6cd4tomhSi"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import random\n",
+        "nome = input('Digite seu nome: ')\n",
+        "token = randrange(1000,10000,2)\n",
+        "print(f\"Olá, {nome}, o seu token de acesso é {token}! Seja bem-vindo(a)!\")"
+      ],
+      "metadata": {
+        "id": "Y4ACJ4rEaqQW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "053fba38-b315-4ec6-a96c-ae9d332e468b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite seu nome: Lucas\n",
+            "Olá, Lucas, o seu token de acesso é 2302! Seja bem-vindo(a)!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 8\n",
+        "Para diversificar e atrair novos clientes, uma lanchonete criou um item misterioso em seu cardápio chamado \"salada de frutas surpresa\". Neste item, são escolhidas aleatoriamente 3 frutas de uma lista de 12 frutas para compor a salada de frutas da pessoa cliente.\n",
+        "\n",
+        "Crie o código que faça essa seleção aleatória de acordo com a lista abaixo:\n",
+        "\n",
+        "```\n",
+        "frutas = [\"maçã\", \"banana\", \"uva\", \"pêra\",\n",
+        "          \"manga\", \"coco\", \"melancia\", \"mamão\",\n",
+        "          \"laranja\", \"abacaxi\", \"kiwi\", \"ameixa\"]\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "FHJHH_WemhFJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from random import choices\n",
+        "frutas = [\"maçã\", \"banana\", \"uva\", \"pêra\",\n",
+        "          \"manga\", \"coco\", \"melancia\", \"mamão\",\n",
+        "          \"laranja\", \"abacaxi\", \"kiwi\", \"ameixa\"]\n",
+        "escolha = choices(frutas, k =3)\n",
+        "print(f'A sua salada terá {escolha[0]}, {escolha[1]} e {escolha[2]}')"
+      ],
+      "metadata": {
+        "id": "gR0BNVGoarOv",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "19e23b3e-5a51-4486-f6be-cbc130f1dc80"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A sua salada terá ameixa, banana e banana\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 9\n",
+        "Você recebeu um desafio de calcular a raiz quadrada de uma lista de números, identificando quais resultaram em um número inteiro. A lista é a seguinte:\n",
+        "```\n",
+        "numeros = [2, 8, 15, 23, 91, 112, 256]\n",
+        "```\n",
+        "\n",
+        "Informe no final quais números possuem raízes inteiras e seus respectivos valores.\n",
+        "\n",
+        "> Dica: use a comparação entre a divisão inteira da raiz por 1 com o valor da raiz para verificar se o número é inteiro. Por exemplo:\n",
+        "```\n",
+        "num = 1.5\n",
+        "num_2 = 2\n",
+        "print(f'{num} é inteiro? :', num // 1 == num)\n",
+        "print(f'{num_2} é inteiro? :', num_2 // 1 == num_2)\n",
+        "```\n",
+        "Saída:\n",
+        "```\n",
+        "1.5 é inteiro? : False\n",
+        "2 é inteiro? : True\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "m_voDwY9mhNJ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from math import sqrt\n",
+        "numeros = [2, 8, 15, 23, 91, 112, 256]\n",
+        "raizes = []\n",
+        "for n in numeros:\n",
+        "  raizes.append(sqrt(n))\n",
+        "for i in range(len(raizes)):\n",
+        "  if raizes[i] // 1 == raizes[i]:\n",
+        "    print(f'O número {numeros[i]} possui raíz {int(raizes[i])} e é inteiro')\n",
+        "  else:\n",
+        "    print(f'O número {numeros[i]} possui raíz {raizes[i]:.3f} e não é inteiro')"
+      ],
+      "metadata": {
+        "id": "80eu9G8HaswW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b2ef361b-3712-413a-d969-8d32306cd2d7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "O número 2 possui raíz 1.414 e não é inteiro\n",
+            "O número 8 possui raíz 2.828 e não é inteiro\n",
+            "O número 15 possui raíz 3.873 e não é inteiro\n",
+            "O número 23 possui raíz 4.796 e não é inteiro\n",
+            "O número 91 possui raíz 9.539 e não é inteiro\n",
+            "O número 112 possui raíz 10.583 e não é inteiro\n",
+            "O número 256 possui raíz 16 e é inteiro\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 10\n",
+        "Faça um programa para uma loja que vende grama para jardins. Essa loja trabalha com jardins circulares e o preço do metro quadrado da grama é de R$ 25,00. Peça à pessoa usuária o raio da área circular e devolva o valor em reais do quanto precisará pagar.  \n",
+        "\n",
+        "> Dica: use a variável [`pi`](https://docs.python.org/pt-br/3/library/math.html#math.pi) e o método [`pow()`](https://docs.python.org/3/library/random.html#random.randrange) da biblioteca `math`. O cálculo de área de um círculo é de: $Area = \\pi \\times r^2$"
+      ],
+      "metadata": {
+        "id": "dBl0iKd7mhYA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from math import pi,pow\n",
+        "raio = float(input('Qual é o raio em metros da área do jardim? '))\n",
+        "area = pi * (pow(raio, 2))\n",
+        "preco = 25 * area\n",
+        "print(f'O preço a ser pago será de R${preco:.2f} pela área de {area:.2f} metros quadrados')"
+      ],
+      "metadata": {
+        "id": "VK0RHwYIattI",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4d44f219-d89b-490e-c0f0-31a60baa3608"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Qual é o raio em metros da área do jardim?10\n",
+            "O preço a ser pago será de R$7853.98 pela área de 314.16 metros quadrados\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 2 - Funções"
+      ],
+      "metadata": {
+        "id": "D9e3FqhO1S3X"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Aquecimento"
+      ],
+      "metadata": {
+        "id": "DTBxjtxXa1dz"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 1\n",
+        "\n",
+        "Escreva um código que lê a lista abaixo e faça:\n",
+        "\n",
+        "```\n",
+        "lista = [16, 14, 63, 65, 17, 99, 70, 11, 20, 48, 79, 32, 17, 89, 12, 25, 66]\n",
+        "```\n",
+        "\n",
+        "- A leitura do tamanho da lista\n",
+        "- A leitura do maior e menor valor\n",
+        "- A soma dos valores da lista\n",
+        "\n",
+        "Ao final exiba uma mensagem dizendo:\n",
+        "\n",
+        "```\n",
+        "\"A lista possui [tam] números em que o maior número é [maior] e o menor número é [menor]. A soma dos valores pares presentes nela é igual a [soma]\"\n",
+        "```\n",
+        "\n",
+        "> Dica: use as funções embutidas presentes na [documentação do Python](https://docs.python.org/3/library/functions.html)\n"
+      ],
+      "metadata": {
+        "id": "dedVZJ3fa1dz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista = [16, 14, 63, 65, 17, 99, 70, 11, 20, 48, 79, 32, 17, 89, 12, 25, 66]\n",
+        "def leit(lista):\n",
+        "  tam = len(lista)\n",
+        "  maior = 0\n",
+        "  menor = 100\n",
+        "  pares = []\n",
+        "  for n in lista:\n",
+        "    if n > maior:\n",
+        "      maior = n\n",
+        "    elif n < menor:\n",
+        "      menor = n\n",
+        "    elif n % 2 == 0:\n",
+        "      pares.append(n)\n",
+        "  soma = sum(pares)\n",
+        "  print(f'A lista possui {tam} números em que o maior número é {maior} e o menor número é {menor}. A soma dos valores pares presentes nela é igual a {soma}')\n",
+        "leit(lista)"
+      ],
+      "metadata": {
+        "id": "KrGD5Nl5a1dz",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3ba53f91-b510-4dd8-89a6-307fe58aa608"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A lista possui 17 números em que o maior número é 99 e o menor número é 11. A soma dos valores pares presentes nela é igual a 248\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 2\n",
+        "\n",
+        "Escreva uma função que gere a tabuada de um número inteiro de 1 a 10, de acordo com a escolha da pessoa usuária. Como exemplo, para o número 7, a tabuada deve ser mostrada no seguinte formato:\n",
+        "```\n",
+        "Tabuada do 7:\n",
+        "7 x 0 = 0\n",
+        "7 x 1 = 7\n",
+        "[...]\n",
+        "7 x 10 = 70\n",
+        "```\n"
+      ],
+      "metadata": {
+        "id": "435rt7sha1dz"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input('Escolha um número inteiro entre 1 e 10: '))\n",
+        "while num < 1 or num > 10:\n",
+        "  num = int(input('O número precisa ser entre 1 e 10: '))\n",
+        "def tabuada(num):\n",
+        "  for n in range(1, 11):\n",
+        "    mult = n * num\n",
+        "    print(f'{num} x {n} = {mult}')\n",
+        "tabuada(num)\n"
+      ],
+      "metadata": {
+        "id": "DxHuhb19a1d0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a4b86b4a-279c-4052-8da3-f69b6408df14"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escolha um número inteiro entre 1 e 10: 23\n",
+            "O número precisa ser entre 1 e 10: 6\n",
+            "6 x 1 = 6\n",
+            "6 x 2 = 12\n",
+            "6 x 3 = 18\n",
+            "6 x 4 = 24\n",
+            "6 x 5 = 30\n",
+            "6 x 6 = 36\n",
+            "6 x 7 = 42\n",
+            "6 x 8 = 48\n",
+            "6 x 9 = 54\n",
+            "6 x 10 = 60\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 3\n",
+        "Crie a função que leia a lista abaixo e retorne uma nova lista com os múltiplos de 3:\n",
+        "\n",
+        "```\n",
+        "[97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]\n",
+        "```\n",
+        "\n",
+        "Utilize o `return` na função e salve a nova lista na variável `mult_3`."
+      ],
+      "metadata": {
+        "id": "OwoNphMPa1d0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = [97, 80, 94, 88, 80, 1, 16, 53, 62, 32, 24, 99]\n",
+        "def mult(lista):\n",
+        "  mult_3 = []\n",
+        "  for n in lista:\n",
+        "    if (n / 3) % 1 == 0:\n",
+        "      mult_3.append(n)\n",
+        "  return mult_3\n",
+        "mult(num)"
+      ],
+      "metadata": {
+        "id": "kYrKxhd8a1d0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "579a5795-4ae5-4c71-e93b-1f6d28ad86f8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[24, 99]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 4\n",
+        "Crie uma lista dos quadrados dos números da seguinte lista `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`.\n",
+        "\n",
+        "Lembre-se de utilizar as funções lambda e `map()` para calcular o quadrado de cada elemento da lista.\n"
+      ],
+      "metadata": {
+        "id": "kFkuo_SUa1d0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\n",
+        "quadrado = lambda x:x*2\n",
+        "resultado = list (map(quadrado, num))\n",
+        "resultado"
+      ],
+      "metadata": {
+        "id": "Iav68EpKa1d0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "51111161-042e-4a18-f52a-4220cf29716e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Aplicando a projetos"
+      ],
+      "metadata": {
+        "id": "PX7G0Qgha1d0"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 5\n",
+        "\n",
+        "Você foi contratado(a) como cientista de dados de uma associação de skate. Para analisar as notas recebidas dos(as) skatistas em algumas competições ao longo do ano, você precisa criar um código que calcula a pontuação dos(as) atletas. Para isso, o seu código deve receber 5 notas digitadas pelas pessoas juradas.\n",
+        "\n",
+        "Para calcular a pontuação de um(a) skatista, você precisa eliminar a maior e a menor pontuação dentre as 5 notas e tirar a média das 3 notas que sobraram.\n",
+        "\n",
+        "Retorne a média para apresentar o texto:\n",
+        "`\"Nota da manobra: [media]\"`\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "oVWgrilxa1d0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "notas = []\n",
+        "for n in range(1, 6):\n",
+        "  nota = float(input(f'Digite a {n}a nota: '))\n",
+        "  notas.append(nota)\n",
+        "def med(lista):\n",
+        "  lista.sort()\n",
+        "  notas_cert = lista[1 : 4]\n",
+        "  media = sum(notas_cert)/3\n",
+        "  print(f'Nota da manobra: {media}')\n",
+        "med(notas)"
+      ],
+      "metadata": {
+        "id": "1nbQ-hIRa1d0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f90649a1-f9be-43f0-882d-4bb714898992"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a 1a nota: 8\n",
+            "Digite a 2a nota: 9\n",
+            "Digite a 3a nota: 5\n",
+            "Digite a 4a nota: 2\n",
+            "Digite a 5a nota: 8\n",
+            "Nota da manobra: 7.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 6\n",
+        "\n",
+        "Para atender a uma demanda de uma instituição de ensino para a análise do desempenho de seus(suas) estudantes, você precisa criar uma função que receba uma lista de 4 notas e retorne:\n",
+        "- maior nota\n",
+        "- menor nota\n",
+        "- média\n",
+        "- situação (Aprovado(a) ou Reprovado(a))\n",
+        "\n",
+        "Para testar o comportamento da função, os dados podem ser exibidos em um texto:\n",
+        "```\n",
+        "\"O(a) estudante obteve uma media de [media], com a sua maior nota de [maior] pontos e a menor nota de [menor] pontos e foi [situacao]\"\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "p3MnWjnda1d0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "notas = []\n",
+        "for n in range(1,5):\n",
+        "  nota = float(input(f'Digite a {n}a nota:'))\n",
+        "  notas.append(nota)\n",
+        "def analise(lis):\n",
+        "  menor = max(lis)\n",
+        "  maior = min(lis)\n",
+        "  media = sum(lis)/len(lis)\n",
+        "  if media > 5:\n",
+        "    situacao = 'Aprovado(a)'\n",
+        "  else:\n",
+        "    situacao = 'Reprovado(a)'\n",
+        "  print(f\"O(a) estudante obteve uma media de {media:.2f}, com a sua maior nota de {maior} pontos e a menor nota de {menor} pontos e foi {situacao}\")\n",
+        "analise(notas)"
+      ],
+      "metadata": {
+        "id": "5Bx-K65ya1d0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "27f631a6-d308-45ef-aefa-82190139c61c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a 1a nota:9\n",
+            "Digite a 2a nota:3\n",
+            "Digite a 3a nota:3\n",
+            "Digite a 4a nota:3\n",
+            "O(a) estudante obteve uma media de 4.50, com a sua maior nota de 9.0 pontos e a menor nota de 9.0 pontos e foi Reprovado(a)\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 7\n",
+        "\n",
+        "Você recebeu uma demanda para tratar 2 listas com os nomes e sobrenomes de cada estudante concatenando-as para apresentar seus nomes completos na forma `Nome Sobrenome`.\n",
+        "\n",
+        "As listas são:\n",
+        "```\n",
+        "nomes = [\"joão\", \"MaRia\", \"JOSÉ\"]\n",
+        "sobrenomes = [\"SILVA\", \"souza\", \"Tavares\"]\n",
+        "```\n",
+        "\n",
+        "O texto exibido ao fim deve ser parecido com:\n",
+        "```\n",
+        "\"Nome completo: Ana Silva\"\n",
+        "```\n",
+        "\n",
+        "> Dica: Utilize a função map para mapear os nomes e sobrenomes e as funções de string para tratar o texto."
+      ],
+      "metadata": {
+        "id": "_sPZj_x9a1d0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nomes = [\"joão\", \"MaRia\", \"JOSÉ\"]\n",
+        "sobrenomes = [\"SILVA\", \"souza\", \"Tavares\"]\n",
+        "def tratar(nome):\n",
+        "  return nome.lower().capitalize()\n",
+        "nomes_1 = []\n",
+        "sobrenomes_1 = []\n",
+        "nomes_1.extend(map(tratar, nomes))\n",
+        "sobrenomes_1.extend(map(tratar, sobrenomes))\n",
+        "for n in range(0,2):\n",
+        "  print(f'Nome completo: {nomes_1[n]} {sobrenomes_1[n]}')"
+      ],
+      "metadata": {
+        "id": "SdPq27E-a1d0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1ea0e47f-ae8a-4e0c-8f38-6d0ea37d26e5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nome completo: João Silva\n",
+            "Nome completo: Maria Souza\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 8\n",
+        "Como cientista de dados em um time de futebol, você precisa implementar novas formas de coleta de dados sobre o desempenho de jogadores e do time como um todo.\n",
+        "\n",
+        "Sua primeira ação é criar uma forma de calcular a pontuação do time no campeonato nacional a partir dos dados de gols marcados e sofridos em cada jogo.\n",
+        "\n",
+        "Escreva uma função chamada `calcula_pontos` que recebe como parâmetros duas listas de números inteiros, representando os gols marcados e sofridos pelo time em cada partida do campeonato.\n",
+        "\n",
+        "A função deve retornar a pontuação do time e o aproveitamento em percentual, levando em consideração que a vitória vale 3 pontos, o empate vale 1 ponto e a derrota 0 pontos.\n",
+        "\n",
+        "> Observação: Se a quantidade de gols marcados numa partida for maior que a de sofridos, o time venceu. Caso seja igual, o time empatou e se for menor, o time perdeu. Para calcular o aproveitamento devemos fazer a razão entre a pontuação do time pela pontuação máxima que ele poderia receber.\n",
+        "\n",
+        "Para teste, utilize as seguintes listas de gols marcados e sofridos\n",
+        "```\n",
+        "gols_marcados = [2, 1, 3, 1, 0]\n",
+        "gols_sofridos = [1, 2, 2, 1, 3]\n",
+        "```\n",
+        "\n",
+        "Provável texto exibido:\n",
+        "```\n",
+        "\"A pontuação do time foi de [pontos] e seu aproveitamento foi de [aprov]%\"\n",
+        "```\n"
+      ],
+      "metadata": {
+        "id": "vC2D83mCa1d0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "gols_marcados = [2, 1, 3, 1, 0]\n",
+        "gols_sofridos = [1, 2, 2, 1, 3]\n",
+        "def calcula_pontos(marcados, sofridos):\n",
+        "  pontos = 0\n",
+        "  for n in range(len(marcados)):\n",
+        "    if marcados[n] > sofridos[n]:\n",
+        "      pontos += 3\n",
+        "    elif marcados[n] == sofridos[n]:\n",
+        "      pontos += 1\n",
+        "  aprov = (pontos/len(gols_marcados*3))*100\n",
+        "  return (pontos, aprov)\n",
+        "pontos, aprov = calcula_pontos(gols_marcados, gols_sofridos)\n",
+        "print(f'A pontuação do time foi de {pontos} e seu aproveitamento foi de {aprov:.2f}%')\n"
+      ],
+      "metadata": {
+        "id": "zxOwouhta1d0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5fa9b72c-a193-42c8-d1fb-f3172da8b923"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A pontuação do time foi de 7 e seu aproveitamento foi de 46.67%\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 9\n",
+        "\n",
+        "Você recebeu o desafio de criar um código que calcula os gastos de uma viagem para uma das quatro cidades partindo de Recife: Salvador, Fortaleza, Natal e Aracaju.\n",
+        "\n",
+        "O custo da diária do hotel é de 150 reais em todas elas e o consumo de gasolina na viagem de carro é de 14 km/l, sendo que o valor da gasolina é de 5 reais o litro. O gastos com passeios e alimentação a se fazer em cada uma delas por dia seria de `[200, 400, 250, 300]`, respectivamente.\n",
+        "\n",
+        "Sabendo que as distâncias entre Recife e cada uma das cidades é de aproximadamente `[850, 800, 300, 550]` km, crie três funções nas quais a 1ª calcule os gastos com hotel (`gasto_hotel`), a 2ª calcule os gastos com a gasolina (`gasto_gasolina`) e a 3ª os gastos com passeio e alimentação (`gasto_passeio`).\n",
+        "\n",
+        "Para testar, simule uma viagem de 3 dias para Salvador partindo de Recife. Considere a viagem de ida e volta de carro.\n",
+        "```\n",
+        "\"Com base nos gastos definidos, uma viagem de [dias] dias para [cidade] saindo de Recife custaria [gastos] reais\"\n",
+        "```\n"
+      ],
+      "metadata": {
+        "id": "QrBlxV7Da1d0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cidades = ['Salvador', 'Fortaleza', 'Natal', 'Aracaju']\n",
+        "aliment = [200, 400, 250, 300]\n",
+        "dist = [850, 800, 300, 550]\n",
+        "def gasto_hotel(dias):\n",
+        "  gasto_1 = dias*150\n",
+        "  return gasto_1\n",
+        "def gasto_gasolina(dist):\n",
+        "  gasto_2 = (dist*2/14)*5\n",
+        "  return gasto_2\n",
+        "def gasto_passeio(passeio, dias):\n",
+        "  gasto_3 = passeio*dias\n",
+        "  return gasto_3\n",
+        "escolha = str(input('Qual cidade é seu destino? '))\n",
+        "dias = int(input('Quantos dias você ficará na viagem? '))\n",
+        "for n in range(len(cidades)):\n",
+        "  if escolha == cidades[n]:\n",
+        "    distancia = dist[n]\n",
+        "    passeio = aliment[n]\n",
+        "    gasto = gasto_hotel(dias) + gasto_gasolina(distancia) + gasto_passeio(passeio, dias)\n",
+        "print(f\"Com base nos gastos definidos, uma viagem de {dias} dias para {escolha} saindo de Recife custaria {gasto:.2f} reais\")\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "VQyaLsnWa1d0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "10b0a417-5b6b-43b1-b1fe-369626faab27"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Qual cidade é seu destino? Salvador\n",
+            "Quantos dias você ficará na viagem? 3\n",
+            "Com base nos gastos definidos, uma viagem de 3 dias para Salvador saindo de Recife custaria 1657.14 reais\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 10\n",
+        "\n",
+        "Você iniciou um estágio em uma empresa que trabalha com processamento de linguagem natural ([NLP](https://www.alura.com.br/artigos/guia-nlp-conceitos-tecnicas)). Sua líder requisitou que você criasse um trecho de código que recebe uma frase digitada pela pessoa usuária e filtre apenas as palavras com tamanho maior ou igual a 5, exibindo-as em uma lista. Essa demanda é voltada para a análise do padrão de comportamento de pessoas na escrita de palavras acima dessa quantidade de caracteres.\n",
+        "\n",
+        "> Dica: utilize as funções lambda e [`filter()`](https://docs.python.org/pt-br/3/library/functions.html?highlight=filter#filter) para filtrar essas palavras. Lembrando que a função embutida `filter()` recebe uma função (no nosso exemplo uma função lambda) e filtra um iterável de acordo com a função. Para tratar a frase use `replace()` para trocar a ',' '.', '!' e '?' por espaço.\n",
+        "\n",
+        "Use a frase `\"Aprender Python aqui na Alura é muito bom\"`para testar o código"
+      ],
+      "metadata": {
+        "id": "Uae8o3eMa1d1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "_WxPiZWtpWoX"
+      },
+      "execution_count": 80,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "RNKCIcDJeBsX"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 3 - Estrutura de dados compostas"
+      ],
+      "metadata": {
+        "id": "u_KhhnCfh3ST"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Aquecimento"
+      ],
+      "metadata": {
+        "id": "6cya3lleh3SU"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 1\n",
+        "\n",
+        "Crie um código para imprimir a soma dos elementos de cada uma das listas contidas na seguinte lista:\n",
+        "```\n",
+        "lista_de_listas = [[4,6,5,9], [1,0,7,2], [3,4,1,8]]\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "MLv8mbbth3SU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_de_listas = [[4,6,5,9], [1,0,7,2], [3,4,1,8]]\n",
+        "somas = [sum(lista) for lista in lista_de_listas]\n",
+        "somas"
+      ],
+      "metadata": {
+        "id": "P9dywp1xh3SU",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "cca8c8be-d735-43bd-c6bc-ce33aca2407d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[24, 10, 16]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 2\n",
+        "\n",
+        "Crie um código para gerar uma lista que armazena o terceiro elemento de cada tupla contida na seguinte lista de tuplas:\n",
+        "```\n",
+        "lista_de_tuplas = [('Pedro', 1.74, 81), ('Júlia', 1.65, 67), ('Otávio', 1.81, 83)]\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "C72i8R3Ih3SU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_de_tuplas = [('Pedro', 1.74, 81), ('Júlia', 1.65, 67), ('Otávio', 1.81, 83)]\n",
+        "def terc(lista):\n",
+        "  listinha = []\n",
+        "  listinha.append(lista[2])\n",
+        "  return listinha\n",
+        "elementos = [terc(lista) for lista in lista_de_tuplas]\n",
+        "elementos"
+      ],
+      "metadata": {
+        "id": "S9EL1Bvjh3SU",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0fbc93cd-ca94-4975-964b-59a402ac547f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[[81], [67], [83]]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 15
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 3\n",
+        "A partir da lista: `lista = ['Pedro', 'Júlia', 'Otávio', 'Eduardo']`, crie um código para gerar uma lista de tuplas em que cada tupla tenha o primeiro elemento como a posição do nome na lista original e o segundo elemento sendo o próprio nome."
+      ],
+      "metadata": {
+        "id": "e5ni69Lwh3SU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista = ['Pedro', 'Júlia', 'Otávio', 'Eduardo']\n",
+        "lista_pronta = [(i, lista[i]) for i in range(len(lista))]\n",
+        "lista_pronta"
+      ],
+      "metadata": {
+        "id": "x3ckJThph3SU",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f042717e-0514-4251-8b59-d03f657fe321"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[(0, 'Pedro'), (1, 'Júlia'), (2, 'Otávio'), (3, 'Eduardo')]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 4\n",
+        "Crie uma lista usando o list comprehension, que armazena somente o valor numérico de cada tupla caso o primeiro elemento seja 'Apartamento' a partir da seguinte lista de tuplas:\n",
+        "```\n",
+        "aluguel = [('Apartamento', 1700), ('Apartamento', 1400), ('Casa', 2150), ('Apartamento', 1900), ('Casa', 1100)]\n",
+        "```\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "mtuC2qBLh3SU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "aluguel = [('Apartamento', 1700), ('Apartamento', 1400), ('Casa', 2150), ('Apartamento', 1900), ('Casa', 1100)]\n",
+        "armaz = [aluguel[i][1] for i in range(len(aluguel)) if aluguel[i][0] == 'Apartamento']\n",
+        "armaz"
+      ],
+      "metadata": {
+        "id": "H1S8yT64h3SU",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "50942f27-0fd9-4362-a06f-ca10f810ce12"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1700, 1400, 1900]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 5\n",
+        "\n",
+        "Crie um dicionário usando o dict comprehension em que as chaves estão na lista `meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']` e os valores estão na lista `despesa = [860, 490, 1010, 780, 900, 630, 590, 770, 620, 560, 840, 360]`\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "Bd-Xp_iKh3SU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez']\n",
+        "despesa = [860, 490, 1010, 780, 900, 630, 590, 770, 620, 560, 840, 360]\n",
+        "despesas = {meses[i]: despesa[i] for i in range(len(meses))}\n",
+        "despesas"
+      ],
+      "metadata": {
+        "id": "y7c5ickkh3SV",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2a6227cb-b969-43b6-c33a-ba0ac224112a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'Jan': 860,\n",
+              " 'Fev': 490,\n",
+              " 'Mar': 1010,\n",
+              " 'Abr': 780,\n",
+              " 'Mai': 900,\n",
+              " 'Jun': 630,\n",
+              " 'Jul': 590,\n",
+              " 'Ago': 770,\n",
+              " 'Set': 620,\n",
+              " 'Out': 560,\n",
+              " 'Nov': 840,\n",
+              " 'Dez': 360}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Aplicando a projetos"
+      ],
+      "metadata": {
+        "id": "T9XuUQIph3SU"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 6\n",
+        "\n",
+        "Uma loja possui um banco de dados com a informação de venda de cada representante e de cada ano e precisa filtrar somente os dados do ano 2022 com venda maior do que 6000. A loja forneceu uma amostra contendo apenas as colunas com os anos e os valores de venda para que você ajude a realizar a filtragem dos dados a partir de um código:\n",
+        "```\n",
+        "vendas = [('2023', 4093), ('2021', 4320), ('2021', 5959), ('2022', 8883), ('2023', 9859), ('2022', 5141), ('2022', 7688), ('2022', 9544), ('2023', 4794), ('2021', 7178), ('2022', 3030), ('2021', 7471), ('2022', 4226), ('2022', 8190), ('2021', 9680), ('2022', 5616)]\n",
+        "```\n",
+        "Crie uma lista usando list comprehension para filtrar os valores de 2022 e que sejam maiores que 6000.\n"
+      ],
+      "metadata": {
+        "id": "WrgAw6a0h3SV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "vendas = [('2023', 4093), ('2021', 4320), ('2021', 5959), ('2022', 8883), ('2023', 9859), ('2022', 5141), ('2022', 7688), ('2022', 9544), ('2023', 4794), ('2021', 7178), ('2022', 3030), ('2021', 7471), ('2022', 4226), ('2022', 8190), ('2021', 9680), ('2022', 5616)]\n",
+        "filtro = [vendas[i][1] for i in range(len(vendas)) if vendas[i][1]>6000 if vendas[i][0] == '2022']\n",
+        "filtro"
+      ],
+      "metadata": {
+        "id": "jQvbtw2sh3SV",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4356934f-a292-446e-8ed0-fab1d6badb5c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[8883, 7688, 9544, 8190]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 7\n",
+        "\n",
+        "Uma clínica analisa dados de pacientes e armazena o valor numérico da glicose em um banco de dados e gostaria de rotular os dados da seguinte maneira:\n",
+        "\n",
+        "- Glicose igual ou inferior a 70: 'Hipoglicemia'\n",
+        "- Glicose entre 70 a 99: 'Normal'\n",
+        "- Glicose entre 100 e 125: 'Alterada'\n",
+        "- Glicose superior a 125: 'Diabetes'\n",
+        "\n",
+        "A clínica disponibilizou parte dos valores e sua tarefa é criar uma lista de tuplas usando list comprehension contendo o rótulo e o valor da glicemia em cada tupla.\n",
+        "\n",
+        "```\n",
+        "glicemia = [129, 82, 60, 97, 101, 65, 62, 167, 87, 53, 58, 92, 66, 120, 109, 62, 86, 96, 103, 88, 155, 52, 89, 73]\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "8Hl7OgcQh3SV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "glicemia = [129, 82, 60, 97, 101, 65, 62, 167, 87, 53, 58, 92, 66, 120, 109, 62, 86, 96, 103, 88, 155, 52, 89, 73]\n",
+        "resultados = ['Hipoglicemia', 'Normal', 'Alterada', 'Diabetes']\n",
+        "results = [(resultados[0], glicemia[i]) if glicemia[i]<= 70 else\n",
+        " (resultados[1], glicemia[i]) if 70<glicemia[i]<=99 else\n",
+        " (resultados[2], glicemia[i]) if 100<=glicemia[i]<=125 else\n",
+        " (resultados[3], glicemia[i]) for i in range(len(glicemia))]\n",
+        "results"
+      ],
+      "metadata": {
+        "id": "cIDqBZrxh3SV",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ce5c14d8-f2b5-4b13-8326-87926ae8e586"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[('Diabetes', 129),\n",
+              " ('Normal', 82),\n",
+              " ('Hipoglicemia', 60),\n",
+              " ('Normal', 97),\n",
+              " ('Alterada', 101),\n",
+              " ('Hipoglicemia', 65),\n",
+              " ('Hipoglicemia', 62),\n",
+              " ('Diabetes', 167),\n",
+              " ('Normal', 87),\n",
+              " ('Hipoglicemia', 53),\n",
+              " ('Hipoglicemia', 58),\n",
+              " ('Normal', 92),\n",
+              " ('Hipoglicemia', 66),\n",
+              " ('Alterada', 120),\n",
+              " ('Alterada', 109),\n",
+              " ('Hipoglicemia', 62),\n",
+              " ('Normal', 86),\n",
+              " ('Normal', 96),\n",
+              " ('Alterada', 103),\n",
+              " ('Normal', 88),\n",
+              " ('Diabetes', 155),\n",
+              " ('Hipoglicemia', 52),\n",
+              " ('Normal', 89),\n",
+              " ('Normal', 73)]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 8\n",
+        "Um e-commerce possui as informações de id de venda, quantidade vendida e preço do produto divididos nas seguintes listas:\n",
+        "\n",
+        "```\n",
+        "id = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+        "quantidade = [15, 12, 1, 15, 2, 11, 2, 12, 2, 4]\n",
+        "preco = [93.0, 102.0, 18.0, 41.0, 122.0, 14.0, 71.0, 48.0, 14.0, 144.0]\n",
+        "```\n",
+        "\n",
+        "O e-commerce precisa estruturar esses dados em uma tabela contendo o valor total da venda, que é obtida multiplicando a quantidade pelo preço unitário. Além disso, tabela precisa conter um cabeçalho indicando as colunas: 'id', 'quantidade', 'preco' e 'total'.\n",
+        "\n",
+        "Crie uma lista de tuplas em que cada tupla tenha um id, quantidade, preço e valor total, na qual a primeira tupla é o cabeçalho da tabela.\n"
+      ],
+      "metadata": {
+        "id": "twYIfol8h3SV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "id = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n",
+        "quantidade = [15, 12, 1, 15, 2, 11, 2, 12, 2, 4]\n",
+        "preco = [93.0, 102.0, 18.0, 41.0, 122.0, 14.0, 71.0, 48.0, 14.0, 144.0]\n",
+        "estrutura = [('ID:', id[i],'Quantidade:', quantidade[i],'Preço:', preco[i],'Total:', quantidade[i]*preco[i])for i in range(len(id))]\n",
+        "estrutura"
+      ],
+      "metadata": {
+        "id": "XnmvwiIwh3SV",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9b087359-98de-47ea-cda7-7dade4ffc9d7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[('ID:', 0, 'Quantidade:', 15, 'Preço:', 93.0, 'Total:', 1395.0),\n",
+              " ('ID:', 1, 'Quantidade:', 12, 'Preço:', 102.0, 'Total:', 1224.0),\n",
+              " ('ID:', 2, 'Quantidade:', 1, 'Preço:', 18.0, 'Total:', 18.0),\n",
+              " ('ID:', 3, 'Quantidade:', 15, 'Preço:', 41.0, 'Total:', 615.0),\n",
+              " ('ID:', 4, 'Quantidade:', 2, 'Preço:', 122.0, 'Total:', 244.0),\n",
+              " ('ID:', 5, 'Quantidade:', 11, 'Preço:', 14.0, 'Total:', 154.0),\n",
+              " ('ID:', 6, 'Quantidade:', 2, 'Preço:', 71.0, 'Total:', 142.0),\n",
+              " ('ID:', 7, 'Quantidade:', 12, 'Preço:', 48.0, 'Total:', 576.0),\n",
+              " ('ID:', 8, 'Quantidade:', 2, 'Preço:', 14.0, 'Total:', 28.0),\n",
+              " ('ID:', 9, 'Quantidade:', 4, 'Preço:', 144.0, 'Total:', 576.0)]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 23
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 9\n",
+        "\n",
+        "Uma empresa possui filiais espalhadas nos estados da região sudeste do Brasil. Em uma das tabelas de cadastro das filiais, há uma coluna contendo a informação de qual é o estado a que pertence:\n",
+        "```\n",
+        "estados = ['SP', 'ES', 'MG', 'MG', 'SP', 'MG', 'ES', 'ES', 'ES', 'SP', 'SP', 'MG', 'ES', 'SP', 'RJ', 'MG', 'RJ', 'SP', 'MG', 'SP', 'ES', 'SP', 'MG']\n",
+        "```\n",
+        "\n",
+        "A empresa sempre está abrindo novas filiais, de modo que a tabela está constantemente recebendo novos registros e o gestor gostaria de possuir a informação atualizada da quantidade de filiais em cada estado. A partir da coluna com a informação dos estados, crie um dicionário usando dict comprehension com a chave sendo o nome de um estado e o valor sendo a contagem de vezes em que o estado aparece na lista.\n",
+        "\n",
+        "> Dica: Você pode fazer um passo intermediário para gerar uma lista de listas em que cada uma das listas possui o nome de apenas um estado com valores repetidos."
+      ],
+      "metadata": {
+        "id": "9tMZEiPzh3SV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "estados = ['SP', 'ES', 'MG', 'MG', 'SP', 'MG', 'ES', 'ES', 'ES', 'SP', 'SP', 'MG', 'ES', 'SP', 'RJ', 'MG', 'RJ', 'SP', 'MG', 'SP', 'ES', 'SP', 'MG']\n",
+        "estados_unicos = list(set(estados))\n",
+        "lista_de_listas = []\n",
+        "for estado in estados_unicos:\n",
+        "  lista = [i for i in estados if i == estado]\n",
+        "  lista_de_listas.append(lista)\n",
+        "filiais = {estados_unicos[i]: len(lista_de_listas[i]) for i in range(len(estados_unicos))}\n",
+        "filiais"
+      ],
+      "metadata": {
+        "id": "qXU5UMUih3SV",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "24acc217-0a7c-4728-daac-38808eaa4b14"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "{'ES': 6, 'MG': 7, 'RJ': 2, 'SP': 8}"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 29
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 10\n",
+        "\n",
+        "Nessa mesma tabela de cadastro de filiais, há uma coluna com as informações da quantidade de funcionários e o gestor gostaria de ter um agrupamento da soma de funcionários para cada estado. As informações contidas na tabela são:\n",
+        "\n",
+        "```\n",
+        "funcionarios = [('SP', 16), ('ES', 8), ('MG', 9), ('MG', 6), ('SP', 10), ('MG', 4), ('ES',9), ('ES', 7), ('ES', 12), ('SP', 7), ('SP', 11), ('MG',8), ('ES',8), ('SP',9), ('RJ', 13), ('MG', 5), ('RJ', 9), ('SP', 12), ('MG', 10), ('SP', 7), ('ES', 14), ('SP', 10), ('MG', 12)]\n",
+        "```\n",
+        "\n",
+        "A partir da lista de tuplas, crie um dicionário em que as chaves são os nomes dos estados únicos e os valores são as listas com o número de funcionários referentes ao estado. Crie também um dicionário em que as chaves são os nomes dos estados e os valores são a soma de funcionários(as) por estado.\n",
+        "\n",
+        "> Dica: Você pode fazer um passo intermediário para gerar uma lista de listas em que cada uma das listas possui apenas os valores numéricos de funcionários de cada estado.\n"
+      ],
+      "metadata": {
+        "id": "JONqYFZjh3SV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "funcionarios = [('SP', 16), ('ES', 8), ('MG', 9), ('MG', 6), ('SP', 10), ('MG', 4), ('ES',9), ('ES', 7), ('ES', 12), ('SP', 7), ('SP', 11), ('MG',8), ('ES',8), ('SP',9), ('RJ', 13), ('MG', 5), ('RJ', 9), ('SP', 12), ('MG', 10), ('SP', 7), ('ES', 14), ('SP', 10), ('MG', 12)]\n",
+        "estados_unicos = list(set([tupla[0] for tupla in funcionarios]))\n",
+        "lista_de_listas = []\n",
+        "for estado in estados_unicos:\n",
+        "  lista = [inform[1] for inform in funcionarios if inform[0] == estado]\n",
+        "  lista_de_listas.append(lista)\n",
+        "lista_func_1 = {estados_unicos[i]: lista_de_listas[i] for i in range(len(estados_unicos))}\n",
+        "lista_func_2 = {estados_unicos[i]: sum(lista_de_listas[i]) for i in range(len(estados_unicos))}\n",
+        "print(lista_func_1)\n",
+        "print(lista_func_2)\n"
+      ],
+      "metadata": {
+        "id": "lq42ThQNh3SV",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "99662a1b-8e53-4907-937e-7f58f57120dc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'ES': [8, 9, 7, 12, 8, 14], 'MG': [9, 6, 4, 8, 5, 10, 12], 'RJ': [13, 9], 'SP': [16, 10, 7, 11, 9, 12, 7, 10]}\n",
+            "{'ES': 58, 'MG': 54, 'RJ': 22, 'SP': 82}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 4 - Lidando com exceções"
+      ],
+      "metadata": {
+        "id": "ckCXdwLdjYgM"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Aquecimento"
+      ],
+      "metadata": {
+        "id": "OPBXL2tLjYgM"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 1\n",
+        "\n",
+        "Faça um programa que solicite à pessoa usuária digitar dois números `float` e calcular a divisão entre esses números. O código deve conter um tratamento de erro, indicando o tipo de erro que foi gerado caso a divisão não seja possível de realizar.\n",
+        "\n",
+        "Teste o programa com o segundo valor numérico do input igual a 0 e também teste utilizando caracteres textuais no input para checar os tipos de erro que ocorrem."
+      ],
+      "metadata": {
+        "id": "7z7VpY0ujYgM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "try:\n",
+        "  num_1  = float(input('Digite o primeiro número: '))\n",
+        "  num_2 = float(input('Digite o segundo número: '))\n",
+        "  resultado = num_1/num_2\n",
+        "except Exception as e:\n",
+        "  print(type(e), f'Erro: {e}')\n",
+        "else:\n",
+        "  print(resultado)\n"
+      ],
+      "metadata": {
+        "id": "Zg1CLRTxjYgM",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5bc52cc8-e4ff-4071-c12a-b42113294525"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o primeiro número: 3\n",
+            "Digite o segundo número: 0\n",
+            "<class 'ZeroDivisionError'> Erro: float division by zero\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 2\n",
+        "\n",
+        "Faça um programa que solicite à pessoa usuária digitar um texto que será uma chave a ser pesquisada no seguinte dicionário: `idades = {'Júlia': 16, 'Carol': 23, 'Alberto': 19, 'Roberta': 17}`, armazenando o resultado do valor em uma variável. O código deve conter um tratamento de erro `KeyError`, imprimindo a informação 'Nome não encontrado' caso ocorra o erro e imprimir o valor caso não ocorra nenhum.\n",
+        "\n",
+        "Teste o programa com um nome presente em uma das chaves do dicionário e com um que não esteja no dicionário para verificar a mensagem de erro.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "KYgeJS5ljYgM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "idades = {'Júlia': 16, 'Carol': 23, 'Alberto': 19, 'Roberta': 17}\n",
+        "try:\n",
+        "  nome = input('Digite o nome da pessoa: ')\n",
+        "  resultado = idades[nome]\n",
+        "except KeyError as e:\n",
+        "  print('Nome não encontrado')\n",
+        "else:\n",
+        "  print(resultado)"
+      ],
+      "metadata": {
+        "id": "mcTh-_tDjYgM",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "05ed4f33-e08b-4eab-e271-845211a06b10"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o nome da pessoa: Lucas\n",
+            "Nome não encontrado\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 3\n",
+        "Crie uma função que recebe uma lista como parâmetro e converta todos os valores da lista para `float`. A função deve conter um tratamento de erro indicando o tipo de erro gerado e retornar a lista caso não tenha ocorrido nenhum erro. Por fim, deve ter a cláusula `finally` para imprimir o texto: 'Fim da execução da função'."
+      ],
+      "metadata": {
+        "id": "tGQNNI_PjYgM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista = [1, 2, 'f', 4, 5]\n",
+        "def tratamento(lista):\n",
+        "  for n in lista:\n",
+        "    float(n)\n",
+        "try:\n",
+        "  tratamento(lista)\n",
+        "except Exception as e:\n",
+        "  print(type(e), f'Erro: {e}')\n",
+        "else:\n",
+        "  print(lista)\n",
+        "finally:\n",
+        "  print('Fim da execução da função.')"
+      ],
+      "metadata": {
+        "id": "1oflR6ywjYgN",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0cab8e6a-aa98-4101-dc78-2be58b04c44e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'ValueError'> Erro: could not convert string to float: 'f'\n",
+            "Fim da execução da função.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 4\n",
+        "Crie uma função que recebe duas listas como parâmetros e agrupe os elementos um a um das listas, formando uma lista de tuplas de 3 elementos, onde o primeiro e segundo elemento da tupla são os valores na posição `i` das listas e o terceiro elemento é a soma dos valores na posição `i` das listas. A função deve conter um tratamento de erro indicando o tipo de erro gerado e retornar como resultado a lista de tuplas. Caso as listas enviadas como parâmetro tenham tamanhos diferentes, a função deve retornar um IndexError com a frase: 'A quantidade de elementos em cada lista é diferente.'\n",
+        "\n",
+        "Dados para testar a função:\n",
+        "\n",
+        "Valores sem erro:\n",
+        "```\n",
+        "lista1 = [4,6,7,9,10]\n",
+        "lista 2 = [-4,6,8,7,9]\n",
+        "```\n",
+        "Listas com tamanhos diferentes:\n",
+        "\n",
+        "```\n",
+        "lista1 = [4,6,7,9,10,4]\n",
+        "lista 2 = [-4,6,8,7,9]\n",
+        "```\n",
+        "Listas com valores incoerentes:\n",
+        "\n",
+        "```\n",
+        "lista1 = [4,6,7,9,'A']\n",
+        "lista 2 = [-4,'E',8,7,9]\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "WWE44VS4jYgN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista1 = [4,6,7,9,'A']\n",
+        "lista2 = [-4,'E',8,7,9]\n",
+        "def soma_listas(lista1, lista2):\n",
+        "    try:\n",
+        "        if len(lista1) == len(lista2):\n",
+        "            dados = [(lista1[i], lista2[i], lista1[i]+lista2[i]) for i in range(len(lista1))]\n",
+        "        else:\n",
+        "            raise IndexError('A quantidade de elementos em cada lista é diferente.')\n",
+        "    except Exception as e:\n",
+        "        print(type(e), f'Erro: {e}')\n",
+        "    else:\n",
+        "        return dados\n",
+        "soma_listas(lista1,lista2)"
+      ],
+      "metadata": {
+        "id": "iMjbUztBjYgN",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8a87bc0f-0065-4804-c6fa-adf53c3e0962"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'TypeError'> Erro: unsupported operand type(s) for +: 'int' and 'str'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Aplicando a projetos"
+      ],
+      "metadata": {
+        "id": "vNSw4u6hjYgN"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 5\n",
+        "\n",
+        "Você recebeu como desafio desenvolver um código que contabiliza as pontuações de estudantes de uma instituição de ensino de acordo com suas respostas num teste.\n",
+        "\n",
+        "Este código deve ser testado para um exemplo de 3 estudantes com uma lista de listas em que cada lista possui as respostas de 5 questões objetivas de cada estudante. Cada questão vale um ponto e as alternativas possíveis são A, B, C ou D.\n",
+        "\n",
+        "Caso alguma alternativa em um dos testes não esteja entre as alternativas possíveis você deve lançar um **ValueError** com a mensagem `\"A alternativa [alternativa] não é uma opção de alternativa válida\"`. O cálculo das 3 notas só será realizado mediante as entradas com as alternativas A, B, C ou D em todos os testes.\n",
+        "\n",
+        "Se não for lançada a exceção, será exibida uma lista com as notas em cada teste.\n",
+        "\n",
+        "Os dados para o teste do código são:\n",
+        "\n",
+        "- **Gabarito da prova**:\n",
+        "```\n",
+        "gabarito = ['D', 'A', 'B', 'C', 'A']\n",
+        "```\n",
+        "Abaixo temos 2 listas de listas que você pode usar como teste\n",
+        "\n",
+        "- **Notas sem exceção:**\n",
+        "```\n",
+        "testes_sem_ex = [['D', 'A', 'B', 'C', 'A'], ['C', 'A', 'A', 'C', 'A'], ['D', 'B', 'A', 'C', 'A']]\n",
+        "```\n",
+        "- **Notas com exceção:**\n",
+        "```\n",
+        "testes_com_ex = [['D', 'A', 'B', 'C', 'A'], ['C', 'A', 'A', 'E', 'A'], ['D', 'B', 'A', 'C', 'A']]\n",
+        "```\n",
+        "\n",
+        "> Dica: Para verificar se uma entrada da lista não está entre as alternativas possíveis use a estrutura `lista[i] not in ['A','B','C','D']` (Por exemplo, `1 not in [2,3,4]`... Saída: `True`)"
+      ],
+      "metadata": {
+        "id": "AHC6OFQDjYgN"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Função para correção das notas\n",
+        "gabarito = ['D', 'A', 'B', 'C', 'A']\n",
+        "def pontuacao(gabarito, respostas):\n",
+        "  pontuacao = []\n",
+        "  try:\n",
+        "    for resposta in respostas:\n",
+        "      nota = 0\n",
+        "      for i in range(len(resposta)):\n",
+        "        if resposta[i] == gabarito[i]:\n",
+        "          nota += 1\n",
+        "        elif resposta not in ['D', 'A', 'B', 'C', 'A']:\n",
+        "          raise ValueError(f'A alternativa {resposta[i]} não é uma opção de alternativa válida')\n",
+        "      pontuacao.append(nota)\n",
+        "  except Exception as e:\n",
+        "    print(e)\n",
+        "  else:\n",
+        "    print(pontuacao)\n",
+        ""
+      ],
+      "metadata": {
+        "id": "n7AJhrMpjYgN"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Testando no exemplo que não lança exceção\n",
+        "gabarito = ['D', 'A', 'B', 'C', 'A']\n",
+        "testes_sem_ex = [['D', 'A', 'B', 'C', 'A'], ['C', 'A', 'A', 'C', 'A'], ['D', 'B', 'A', 'C', 'A']]\n",
+        "def pontuacao(gabarito, respostas):\n",
+        "  pontuacoes = []\n",
+        "  try:\n",
+        "    for resposta in respostas:\n",
+        "      nota = 0\n",
+        "      for i in range(len(resposta)):\n",
+        "        if resposta[i] not in ['A', 'B', 'C', 'D']:\n",
+        "          raise ValueError(f'A alternativa {resposta[i]} não é uma opção de alternativa válida')\n",
+        "        elif resposta[i] == gabarito[i]:\n",
+        "          nota += 1\n",
+        "      pontuacoes.append(nota)\n",
+        "  except Exception as e:\n",
+        "    print(e)\n",
+        "  else:\n",
+        "    print(pontuacoes)\n",
+        "pontuacao(gabarito, testes_sem_ex)"
+      ],
+      "metadata": {
+        "id": "o_05pMigo-tR",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0aafffde-958e-465e-8b66-d89277c812c5"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[5, 3, 3]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Testando no exemplo que lança exceção\n",
+        "gabarito = ['D', 'A', 'B', 'C', 'A']\n",
+        "testes_com_ex = [['D', 'A', 'B', 'C', 'A'], ['C', 'A', 'A', 'E', 'A'], ['D', 'B', 'A', 'C', 'A']]\n",
+        "def pontuacao(gabarito, respostas):\n",
+        "  pontuacoes = []\n",
+        "  try:\n",
+        "    for resposta in respostas:\n",
+        "      nota = 0\n",
+        "      for i in range(len(resposta)):\n",
+        "        if resposta[i] not in ['A', 'B', 'C', 'D']:\n",
+        "          raise ValueError(f'A alternativa {resposta[i]} não é uma opção de alternativa válida')\n",
+        "        elif resposta[i] == gabarito[i]:\n",
+        "          nota += 1\n",
+        "      pontuacoes.append(nota)\n",
+        "  except Exception as e:\n",
+        "    print(e)\n",
+        "  else:\n",
+        "    print(pontuacoes)\n",
+        "pontuacao(gabarito, testes_com_ex)"
+      ],
+      "metadata": {
+        "id": "PWeHm6Fjo-at",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "32891715-9655-4985-f1ff-9a2156743414"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A alternativa E não é uma opção de alternativa válida\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 6\n",
+        "\n",
+        "Você está trabalhando com processamento de linguagem natural ([NLP](https://www.alura.com.br/artigos/guia-nlp-conceitos-tecnicas)) e, dessa vez, sua líder requisitou que você criasse um trecho de código que recebe uma lista com as palavras separadas de uma frase gerada pelo ChatGPT.\n",
+        "\n",
+        "Você precisa criar uma função que avalia cada palavra desse texto e verificar se o tratamento para retirar os símbolos de pontuação (',' '.', '!' e '?') foi realizado. Caso contrário, será lançada uma exceção do tipo **ValueError** apontando o 1º caso em que foi detectado o uso de uma pontuação por meio da frase `\"O texto apresenta pontuações na palavra \"[palavra]\".\"`.\n",
+        "\n",
+        "Essa demanda é voltada para a análise do padrão de frases geradas pela inteligência artificial.\n",
+        "\n",
+        "> Dica: Para verificar se uma ou mais das pontuações estão presentes em cada palavra, utilize a palavra chave `or` na condição if (Por exemplo, `('a' or 'b') in 'alura'` ... Saída: `True`)\n",
+        "\n",
+        "Os dados para o teste do código são:\n",
+        "\n",
+        "- **Lista tratada:**\n",
+        "```\n",
+        "lista_tratada = ['Python', 'é', 'uma', 'linguagem', 'de', 'programação', 'poderosa', 'versátil',\n",
+        "                  'e', 'fácil', 'de', 'aprender', 'utilizada', 'em', 'diversos', 'campos', 'desde',\n",
+        "                  'análise', 'de', 'dados', 'até', 'inteligência', 'artificial']\n",
+        "```\n",
+        "- **Lista não tratada:**\n",
+        "```\n",
+        "lista_nao_tratada = ['Python', 'é', 'uma', 'linguagem', 'de', 'programação', 'poderosa,', 'versátil',\n",
+        "                  'e', 'fácil,', 'de', 'aprender', 'utilizada', 'em', 'diversos', 'campos,', 'desde',\n",
+        "                  'análise', 'de', 'dados', 'até', 'inteligência', 'artificial!']\n",
+        "```\n"
+      ],
+      "metadata": {
+        "id": "AjQWxSIq28Ac"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# criando a função que recebe a lista de palavras\n",
+        "def tratamento(lista: list):\n",
+        "    for i in lista:\n",
+        "      if (',' or '.' or '!' or '?') in i:\n",
+        "        raise ValueError(f'O texto apresenta pontuações na palavra \"{i}\".')\n",
+        "    return 'A lista está tratada corretamente.'"
+      ],
+      "metadata": {
+        "id": "gxVg1sc_xACI"
+      },
+      "execution_count": 52,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Testando no exemplo que não lança exceção\n",
+        "lista_tratada = ['Python', 'é', 'uma', 'linguagem', 'de', 'programação', 'poderosa', 'versátil',\n",
+        "                  'e', 'fácil', 'de', 'aprender', 'utilizada', 'em', 'diversos', 'campos', 'desde',\n",
+        "                  'análise', 'de', 'dados', 'até', 'inteligência', 'artificial']\n",
+        "try:\n",
+        "  trat = tratamento(lista_tratada)\n",
+        "except Exception as e:\n",
+        "  print(e)\n",
+        "else:\n",
+        "  print(trat)"
+      ],
+      "metadata": {
+        "id": "gDvOq79slmlJ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "df7aca2a-890b-4e50-eadd-1d045ff6df95"
+      },
+      "execution_count": 49,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "A lista está tratada corretamente.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Testando no exemplo que lança exceção\n",
+        "lista_nao_tratada = ['Python', 'é', 'uma', 'linguagem', 'de', 'programação', 'poderosa,', 'versátil',\n",
+        "                  'e', 'fácil,', 'de', 'aprender', 'utilizada', 'em', 'diversos', 'campos,', 'desde',\n",
+        "                  'análise', 'de', 'dados', 'até', 'inteligência', 'artificial!']\n",
+        "try:\n",
+        "  trat = tratamento(lista_nao_tratada)\n",
+        "except Exception as e:\n",
+        "  print(e)\n",
+        "else:\n",
+        "  print(trat)"
+      ],
+      "metadata": {
+        "id": "PQADJf42woaw",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ff9566aa-5c08-471f-aa0a-5c5d01b65ae0"
+      },
+      "execution_count": 51,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "O texto apresenta pontuações na palavra \"poderosa,\".\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 7\n",
+        "Você foi contratado como uma pessoa cientista de dados para auxiliar um laboratório que faz experimentos sobre o comportamento de uma cultura de fungos. O laboratório precisa avaliar constantemente a razão (divisão) entre os dados de pressão e temperatura do ambiente controlado recolhidos durante a experimentação para definir a melhor condição para os testes.\n",
+        "\n",
+        "Para cumprir com a demanda, você precisa criar uma função `divide_colunas` que recebe os dados das colunas de pressão e temperatura (que vem no formato de listas) e gerar uma nova coluna com o resultado da divisão. Os parâmetros da função são as duas listas e você deve tratar dentro dela ao menos 2 tipos de exceções:   \n",
+        "- Verificar se as listas têm o mesmo tamanho (ValueError)\n",
+        "- Verificar se existe alguma divisão por zero (ZeroDivisionError)\n",
+        "\n",
+        "Para testar a função, vamos realizar a divisão entre duas listas de dados coletados no experimento, com os valores de pressão e temperatura do ambiente controlado.\n",
+        "\n",
+        "Como teste, use os seguintes dados:\n",
+        "\n",
+        "- **Dados sem exceção:**\n",
+        "```\n",
+        "pressoes = [100, 120, 140, 160, 180]\n",
+        "temperaturas = [20, 25, 30, 35, 40]\n",
+        "```\n",
+        "- **Dados com exceção:**\n",
+        "1. Exceção de ZeroDivisionError\n",
+        "```\n",
+        "pressoes = [60, 120, 140, 160, 180]\n",
+        "temperaturas = [0, 25, 30, 35, 40]\n",
+        "```\n",
+        "2. Exceção de ValueError\n",
+        "```\n",
+        "pressoes = [100, 120, 140, 160]\n",
+        "temperaturas = [20, 25, 30, 35, 40]\n",
+        "```\n",
+        "\n",
+        "> Dica: Você pode usar `zip()` para parear os dados da lista_1 com a lista_2. Crie uma estrutura try-except que caso uma das exceções sejam lançadas, podemos ver o tipo de erro na saída.\n"
+      ],
+      "metadata": {
+        "id": "3IhndsTyzdRq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def divide_colunas (x,y):\n",
+        "  resultados = []\n",
+        "  try:\n",
+        "    if len(x) != len(y):\n",
+        "      raise ValueError('As listas não tem o mesmo tamanho.')\n",
+        "    for n in range(len(x)):\n",
+        "      if y[n] == 0:\n",
+        "        raise ZeroDivisionError('Não é possível dividir por 0')\n",
+        "      calculo = round(x[n]/y[n],2)\n",
+        "      resultados.append(calculo)\n",
+        "  except Exception as e:\n",
+        "    print(e)\n",
+        "  else:\n",
+        "    print(resultados)"
+      ],
+      "metadata": {
+        "id": "pYofyZVsuF2Y"
+      },
+      "execution_count": 77,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Testando no exemplo que não lança exceção\n",
+        "pressoes = [100, 120, 140, 160, 180]\n",
+        "temperaturas = [20, 25, 30, 35, 40]\n",
+        "divide_colunas(pressoes, temperaturas)"
+      ],
+      "metadata": {
+        "id": "gSvAEmxit1zI",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4c0384fb-df3d-4bb5-e302-a8cd63037e7d"
+      },
+      "execution_count": 78,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[5.0, 4.8, 4.67, 4.57, 4.5]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Testando no exemplo que lança exceção (ZeroDivisionError)\n",
+        "pressoes = [60, 120, 140, 160, 180]\n",
+        "temperaturas = [0, 25, 30, 35, 40]\n",
+        "divide_colunas(pressoes, temperaturas)"
+      ],
+      "metadata": {
+        "id": "bvebuMOot4ur",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "02a9b473-f210-44f6-ce6d-066261fa3dee"
+      },
+      "execution_count": 79,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Não é possível dividir por 0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Testando no exemplo que lança exceção (ValueError)\n",
+        "pressoes = [100, 120, 140, 160]\n",
+        "temperaturas = [20, 25, 30, 35, 40]\n",
+        "divide_colunas(pressoes, temperaturas)"
+      ],
+      "metadata": {
+        "id": "sFsfTVHqt4d5",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "fe7d8dca-7aea-4bb2-8372-e4716d4cd426"
+      },
+      "execution_count": 80,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "As listas não tem o mesmo tamanho.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
