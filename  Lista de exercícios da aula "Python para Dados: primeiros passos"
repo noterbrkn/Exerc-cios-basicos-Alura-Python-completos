@@ -1,0 +1,3086 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "toc_visible": true,
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/noterbrkn/Exerc-cios-basicos-Alura-Python-completos/blob/main/%20Lista%20de%20exerc%C3%ADcios%20da%20aula%20%22Python%20para%20Dados%3A%20primeiros%20passos%22\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Sobre o notebook\n",
+        "\n",
+        "A \"hora da prática\" é uma atividade do curso de Python para Data Science da Alura que contém diversos desafios envolvendo os aprendizados de cada aula.\n",
+        "\n",
+        "O notebook \"hora da pratica\" é um notebook construído com espaço para as células dos desafios propostos no curso, com ele você tem espaço para construir e executar suas soluções"
+      ],
+      "metadata": {
+        "id": "_kwAaQ36gLQ1"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 1 - Introdução ao Python"
+      ],
+      "metadata": {
+        "id": "Mc-KN0dA0Z83"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Questão 1\n",
+        "\n",
+        "Imprima a frase `Escola de Dados da Alura!`"
+      ],
+      "metadata": {
+        "id": "l5eLWf0W0ikn"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('Escola de Dados da Alura!')"
+      ],
+      "metadata": {
+        "id": "5pllxJ0h0-yA",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5278aa3c-c318-4955-ea16-e2994bc4bd72"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escola de Dados da Alura!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Questão 2\n",
+        "Imprima na tela seu nome e seu sobrenome seguindo a estrutura abaixo:\n",
+        "```\n",
+        "Nome: [seu nome]\n",
+        "Sobrenome: [seu sobrenome]\n",
+        "```\n"
+      ],
+      "metadata": {
+        "id": "tQdX90Ue03c7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('Nome: Lucas \\nSobrenome: Rossini')"
+      ],
+      "metadata": {
+        "id": "RVw5iKn20_Ps",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4b32500f-2faf-4448-d857-8d92d7661c68"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Nome: Lucas \n",
+            "Sobrenome: Rossini\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Questão 3\n",
+        "Imprima o seu primeiro nome letra a letra. Por exemplo, nome é Mirla, então eu obtenho a seguinte saída:\n",
+        "```\n",
+        "M\n",
+        "I\n",
+        "R\n",
+        "L\n",
+        "A\n",
+        "```\n"
+      ],
+      "metadata": {
+        "id": "gfg-aiip03vC"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print('L \\nU \\nC \\nA \\nS')"
+      ],
+      "metadata": {
+        "id": "v5bkrgf60_qx",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c40215dd-db50-41cc-9591-1616ba1adfc8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "L \n",
+            "U \n",
+            "C \n",
+            "A \n",
+            "S\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Questão 4\n",
+        "Imprima o dia do seu nascimento em formato `dia mês ano`. Os valores de dia e ano não podem estar entre aspas. O formato deve estar como no exemplo, supondo uma data de aniversário dia 28 de fevereiro de 2003:\n",
+        "```\n",
+        "28 fevereiro 2003\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "oadrJbl704MM"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(20, 'Abril', 2009)"
+      ],
+      "metadata": {
+        "id": "cx0KSsrq1ALD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "eadfd1fc-818d-4aa8-bf3e-b68816884aa1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "20 Abril 2009\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Questão 5\n",
+        "Imprima em um único print o atual ano que você está fazendo esse curso, o valor do ano deve ser um dado numérico. A saída do print deve ser a seguinte:\n",
+        "```\n",
+        "Ano atual: [ano]\n",
+        "```\n"
+      ],
+      "metadata": {
+        "id": "3RgyMaan04TD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "UN77EfQ2d36Y",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7ff4233a-569a-4173-9670-4f1b557a3dcb"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Ano atual: 2026\n"
+          ]
+        }
+      ],
+      "source": [
+        "ano = 2026\n",
+        "print(f'Ano atual: {ano}')"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 2 - Manipulando dados no Python"
+      ],
+      "metadata": {
+        "id": "D9e3FqhO1S3X"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Coleta e amostragem de dados"
+      ],
+      "metadata": {
+        "id": "n6o7C1Ze2cRe"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 1\n",
+        "Crie um programa que solicite à pessoa usuária digitar seu nome, e imprima “Olá, [nome]!”."
+      ],
+      "metadata": {
+        "id": "sRneWag9PV5Q"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nome = input('Qual o seu nome?')\n",
+        "print('Olá,', nome)"
+      ],
+      "metadata": {
+        "id": "dbX1fKqy2HnE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f192de8d-e68d-4dc4-f2aa-fd82d6661b92"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Qual o seu nome?Lucas\n",
+            "Olá, Lucas\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 2\n",
+        "Crie um programa que solicite à pessoa usuária digitar seu nome e idade, e imprima “Olá, [nome], você tem [idade] anos.”."
+      ],
+      "metadata": {
+        "id": "BJ1SznEp70d5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nome = input('Qual o seu nome?')\n",
+        "idade = int(input('Qual a sua idade?'))\n",
+        "print(f'Olá, {nome}, você tem {idade} anos')"
+      ],
+      "metadata": {
+        "id": "jKz-0Sq8PFkp",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "327d89e8-427c-4257-fde2-e95f08497931"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Qual o seu nome?Lucas\n",
+            "Qual a sua idade?16\n",
+            "Olá, Lucas, você tem 16 anos\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 3\n",
+        "Crie um programa que solicite à pessoa usuária digitar seu nome, idade e altura em metros, e imprima “Olá, [nome], você tem [idade] anos e mede [altura] metros!”."
+      ],
+      "metadata": {
+        "id": "2T0jNYZt70aa"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nome = input('Digite seu nome: ')\n",
+        "idade = int(input('Digite sua idade: '))\n",
+        "altura = float(input('Digite sua altura: '))\n",
+        "print(f'Olá, {nome}, você tem {idade} anos e mede {altura} metros.')"
+      ],
+      "metadata": {
+        "id": "pI4kHNzTPIXh",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1d46e239-895e-410b-96ed-2e0da1a067b3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite seu nome: Lucas\n",
+            "Digite sua idade: 16\n",
+            "Digite sua altura: 1.75\n",
+            "Olá, Lucas, você tem 16 anos e mede 1.75 metros.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Calculadora com operadores"
+      ],
+      "metadata": {
+        "id": "mEBFwKkC70KP"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 1\n",
+        "\n",
+        "Crie um programa que solicite dois valores numéricos à pessoa usuária e imprima a soma dos dois valores."
+      ],
+      "metadata": {
+        "id": "H-IV1oAPPSqK"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input(\"Digite um valor: \"))\n",
+        "n2 = int(input(\"Digite um valor: \"))\n",
+        "print(n1 + n2)"
+      ],
+      "metadata": {
+        "id": "Zb0W84sy8rnp",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ba436336-95dc-4f47-e026-bebf633e0f76"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um valor: 1\n",
+            "Digite um valor: 2\n",
+            "3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 2\n",
+        "Crie um programa que solicite três valores numéricos à pessoa usuária e imprima a soma dos três valores."
+      ],
+      "metadata": {
+        "id": "LUoi2MOu70Em"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input(\"Digite um valor: \"))\n",
+        "n2 = int(input(\"Digite um valor: \"))\n",
+        "n3= int(input(\"Digite um valor: \"))\n",
+        "print(n1 + n2 + n3)"
+      ],
+      "metadata": {
+        "id": "4FYjWyBS8rDm",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5061364a-a84f-491d-8fe5-0621bfd41a3b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um valor: 1\n",
+            "Digite um valor: 2\n",
+            "Digite um valor: 3\n",
+            "6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 3\n",
+        "Crie um programa que solicite dois valores numéricos à pessoa usuária e imprima a subtração do primeiro pelo o segundo valor."
+      ],
+      "metadata": {
+        "id": "lezGctF07z8i"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input(\"Digite um valor: \"))\n",
+        "n2 = int(input(\"Digite um valor: \"))\n",
+        "print(n1 - n2)"
+      ],
+      "metadata": {
+        "id": "k0GE1z4w8p3J",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3dfb990e-e364-4d71-c1d0-8a390ede7bb7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um valor: 2\n",
+            "Digite um valor: 1\n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 4\n",
+        "\n",
+        "Crie um programa que solicite dois valores numéricos à pessoa usuária e imprima a multiplicação dos dois valores.\n"
+      ],
+      "metadata": {
+        "id": "wwMP-dPU7zxW"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input(\"Digite um valor: \"))\n",
+        "n2 = int(input(\"Digite um valor: \"))\n",
+        "print(n1 * n2)"
+      ],
+      "metadata": {
+        "id": "GzFCVHfp8peZ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "75ee42d3-55a7-4f0c-b3cd-52cb6fd02e58"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um valor: 10\n",
+            "Digite um valor: 120\n",
+            "1200\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 5\n",
+        "\n",
+        "Crie um programa que solicite dois valores numéricos, um numerador e um denominador, e realize a divisão entre os dois valores. Deixe claro que o valor do denominador não pode ser `0`.\n"
+      ],
+      "metadata": {
+        "id": "9kxyHxUo7zRD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input(\"Digite um valor: \"))\n",
+        "n2 = int(input(\"Digite um valor: \"))\n",
+        "print((n1 / n2))"
+      ],
+      "metadata": {
+        "id": "ytJ8l5KH8ozc",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c2ae3812-6b79-4284-f6ce-55d5694113a5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um valor: 12\n",
+            "Digite um valor: 2\n",
+            "6.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 6\n",
+        "\n",
+        "Crie um programa que solicite dois valores numéricos, um operador e uma potência, e realize a exponenciação entre esses dois valores.\n"
+      ],
+      "metadata": {
+        "id": "zkUSBTQq8Hxt"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input(\"Digite um valor: \"))\n",
+        "n2 = int(input(\"Digite um valor: \"))\n",
+        "print(n1 ** n2)"
+      ],
+      "metadata": {
+        "id": "RPj36jq08oZp",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1262ae6f-dd3d-4e62-ee76-fafd9975f876"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um valor: 12\n",
+            "Digite um valor: 2\n",
+            "144\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 7\n",
+        "Crie um programa que solicite dois valores numéricos, um numerador e um denominador e realize a divisão inteira entre os dois valores. Deixe claro que o valor do denominador não pode ser `0`."
+      ],
+      "metadata": {
+        "id": "yiunIusZ8Huj"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input(\"Digite um valor: \"))\n",
+        "n2 = int(input(\"Digite um valor: \"))\n",
+        "print(int(n1 / n2))"
+      ],
+      "metadata": {
+        "id": "UHK8xITf8oCg",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1fdc0856-f2c9-45f3-9c1d-434f7a7da73d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um valor: 12\n",
+            "Digite um valor: 2\n",
+            "6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 8\n",
+        "\n",
+        "Crie um programa que solicite dois valores numéricos, um numerador e um denominador, e retorne o resto da divisão entre os dois valores. Deixe claro que o valor do denominador não pode ser `0`."
+      ],
+      "metadata": {
+        "id": "z_D_JiLX8Hra"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input(\"Digite um valor: \"))\n",
+        "n2 = int(input(\"Digite um valor: \"))\n",
+        "print(n1 % n2)"
+      ],
+      "metadata": {
+        "id": "EWGJeukO8nqx",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3a08b49b-c875-4db9-eff7-5ec5c01943f3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite um valor: 12\n",
+            "Digite um valor: 5\n",
+            "2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 9\n",
+        "\n",
+        "Crie um código que solicita 3 notas de um estudante e imprima a média das notas."
+      ],
+      "metadata": {
+        "id": "RDRajNkU8N8N"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input(\"Digite a primeira nota: \"))\n",
+        "n2 = int(input(\"Digite a segunda nota: \"))\n",
+        "n3 = int(input(\"Digite a terceira nota: \"))\n",
+        "media = ((n1 + n2 + n3)/3)\n",
+        "print(float(media))"
+      ],
+      "metadata": {
+        "id": "H6F4Ojzt8nSR",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3ad7c326-a18b-42b1-e3a7-b268d69f43fc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite a primeira nota: 20\n",
+            "Digite a segunda nota: 20\n",
+            "Digite a terceira nota: 20\n",
+            "20.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 10\n",
+        "\n",
+        "Crie um código que calcule e imprima a média ponderada dos números 5, 12, 20 e 15 com pesos respectivamente iguais a 1, 2, 3 e 4."
+      ],
+      "metadata": {
+        "id": "d7fjkne58N21"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "media = ((5*1 + 12*2 + 20 * 3 + 15* 4)/4)\n",
+        "print(float(media))"
+      ],
+      "metadata": {
+        "id": "fwjoHlV48mkv",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "efaf8cbd-696f-466d-9766-4a6a94c8d931"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "37.25\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Editando textos"
+      ],
+      "metadata": {
+        "id": "GNmbX1OU8N0V"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 1\n",
+        "\n",
+        "Crie uma variável chamada “`frase`” e atribua a ela uma string de sua escolha. Em seguida, imprima a frase na tela."
+      ],
+      "metadata": {
+        "id": "6wZ85mCsRCV0"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = str('Alura')\n",
+        "print(frase)"
+      ],
+      "metadata": {
+        "id": "eRqr_gh-8mFy",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e8289a2c-d4aa-45e1-dcb0-d40295eaa365"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Alura\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 2\n",
+        "Crie um código que solicite uma frase e depois imprima a frase na tela."
+      ],
+      "metadata": {
+        "id": "Aac17z-18Nwv"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = str(input('Escreva a palavra \"Alura\": '))\n",
+        "print(frase)"
+      ],
+      "metadata": {
+        "id": "8zfE2hh98lb0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3fe85e83-0737-4252-e6ee-2f4b93fef497"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a palavra \"Alura\": Alura\n",
+            "Alura\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 3\n",
+        "\n",
+        "Crie um código que solicite uma frase à pessoa usuária e imprima a mesma frase digitada mas com todas as letras maiúsculas."
+      ],
+      "metadata": {
+        "id": "DXVzqpN58Ntr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = (input('Escreva a palavra \"Alura\": '))\n",
+        "print(frase.upper())"
+      ],
+      "metadata": {
+        "id": "d0VzoYP68k-I",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6fafd327-98b0-4b8b-f255-e61414226830"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a palavra \"Alura\": alura\n",
+            "ALURA\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 4\n",
+        "\n",
+        "Crie um código que solicite uma frase à pessoa usuária e imprima a mesma frase digitada mas com todas as letras minúsculas."
+      ],
+      "metadata": {
+        "id": "I12VeNPK8Nqb"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = (input('Escreva a palavra \"Alura\": '))\n",
+        "print(frase.lower())"
+      ],
+      "metadata": {
+        "id": "KD8rNy2K8kox",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c36f8ca0-d2bb-48ed-933a-ac8b1d18f023"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a palavra \"Alura\": Alura\n",
+            "alura\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 5\n",
+        "\n",
+        "Crie uma variável chamada “`frase`” e atribua a ela uma string de sua escolha. Em seguida, imprima a frase sem espaços em branco no início e no fim."
+      ],
+      "metadata": {
+        "id": "cRqngSE48Nog"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = '   Escreva a palavra \"Alura\"   '\n",
+        "print(frase.strip())"
+      ],
+      "metadata": {
+        "id": "aSCpdF-o8kBs",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b52ec48a-9eeb-42f9-8d19-7d90ff3ad00a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a palavra \"Alura\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 6\n",
+        "\n",
+        "Crie um código que solicite uma frase à pessoa usuária e imprima a mesma frase sem espaços em branco no início e no fim."
+      ],
+      "metadata": {
+        "id": "murIazpQ8Nkv"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = (input('Escreva a frase \" Essa frase tem espaços\": '))\n",
+        "print(frase.strip())"
+      ],
+      "metadata": {
+        "id": "tHunjwuG8jNq",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b3f50b4e-2058-4519-fd61-9c91769b78f3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a frase \" Essa frase tem espaços\":    Essa frase tem espaços\n",
+            "Essa frase tem espaços\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 7\n",
+        "\n",
+        "\n",
+        "Crie um código que solicite uma frase à pessoa usuária e imprima a mesma frase sem espaços em branco no início e no fim e em letras minúsculas."
+      ],
+      "metadata": {
+        "id": "eRxc2OeX8Nh2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = (input('Escreva a frase \" Essa frase tem espaços\": '))\n",
+        "print(frase.strip().lower())"
+      ],
+      "metadata": {
+        "id": "DYm0_UwS8ih6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e47765e9-84db-49a7-cf88-494e462f3823"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a frase \" Essa frase tem espaços\":   Essa frase tem espaços E TA EM MAIUSCULA    \n",
+            "essa frase tem espaços e ta em maiuscula\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 8\n",
+        "\n",
+        "Crie um código que solicite uma frase à pessoa usuária e imprima a mesma frase com todas as vogais “`e`” trocadas pela letra “`f`”."
+      ],
+      "metadata": {
+        "id": "UKATLavs8NfI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = (input('Escreva a frase \" Estamos enlouquecidos\": '))\n",
+        "print(frase.replace('e', 'f'))"
+      ],
+      "metadata": {
+        "id": "k64C5G5S8iLO",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b264d74e-a546-43c6-87f9-5e2a04d1daf5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a frase \" Estamos enlouquecidos\": Estamos enlouquecidos\n",
+            "Estamos fnlouqufcidos\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 9\n",
+        "\n",
+        "\n",
+        "Crie um código que solicite uma frase à pessoa usuária e imprima a mesma frase com todas as vogais “`a`” trocadas pela caractere  “`@`”."
+      ],
+      "metadata": {
+        "id": "n_1SPchw8NdG"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = (input('Escreva a frase \" Estamos enlouquecidos\": '))\n",
+        "print(frase.replace('e', '@').replace('E', '@'))"
+      ],
+      "metadata": {
+        "id": "msaDNm_p8h0D",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5ec283f0-1393-4744-f5a5-649ded78628c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a frase \" Estamos enlouquecidos\": Estamos enlouquecidos\n",
+            "@stamos @nlouqu@cidos\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 10\n",
+        "\n",
+        "\n",
+        "Crie um código que solicite uma frase à pessoa usuária e imprima a mesma frase com todas as consoantes “`s`” trocadas pelo caractere  “`$`”."
+      ],
+      "metadata": {
+        "id": "H3sTTjqI8Naa"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = (input('Escreva a frase \" Estamos enlouquecidos\": '))\n",
+        "print(frase.replace('s', '$'))"
+      ],
+      "metadata": {
+        "id": "RPBIsWT68e-1",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "593d4c18-4637-49e5-f12e-64221dcb2f22"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Escreva a frase \" Estamos enlouquecidos\": Estamos enlouquecidos\n",
+            "E$tamo$ enlouquecido$\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 3 - Estruturas condicionais"
+      ],
+      "metadata": {
+        "id": "XGePe4GD2I59"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Aquecendo na programação"
+      ],
+      "metadata": {
+        "id": "Pr9HTW0UHCdD"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 1\n",
+        "Escreva um programa que peça à pessoa usuária para fornecer dois números e exibir o número maior."
+      ],
+      "metadata": {
+        "id": "xBZHqhVg80Fy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input('Fornaça um número: '))\n",
+        "n2 = int(input('Fornaça outro número: '))\n",
+        "if n1 > n2:\n",
+        "  print(n1)\n",
+        "else:\n",
+        "  print(n2)"
+      ],
+      "metadata": {
+        "id": "GJlGnzjc-xyF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5a935a64-c67a-493b-e0fa-2e973b21034e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Fornaça um número: 4\n",
+            "Fornaça outro número: 2\n",
+            "4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 2\n",
+        "Escreva um programa que solicite o percentual de crescimento de produção de uma empresa e informe se houve um crescimento (porcentagem positiva) ou decrescimento (porcentagem negativa)."
+      ],
+      "metadata": {
+        "id": "H4sgN7dyHNJF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input('Informe o porcentual de crescimento de produção da empresa: '))\n",
+        "if n1 > 0:\n",
+        "  print(f'Houve um crescimento')\n",
+        "else:\n",
+        "  print(f'Houve um decrescimento')"
+      ],
+      "metadata": {
+        "id": "-2_Ry5XJ-yZW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "92daebb2-d867-40ae-8bf5-3fb2c2378570"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Informe o porcentual de crescimento de produção da empresa: -20\n",
+            "Houve um decrescimento\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 3\n",
+        "Escreva um programa que determine se uma letra fornecida pela pessoa usuária é uma vogal ou consoante."
+      ],
+      "metadata": {
+        "id": "a_mzNOBDHNny"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l1 = str(input('Forneça uma letra: '))\n",
+        "\n",
+        "if l1 == 'a':\n",
+        "  print('Vogal')\n",
+        "elif l1 == 'e':\n",
+        "  print('Vogal')\n",
+        "elif l1 == 'i':\n",
+        "  print('Vogal')\n",
+        "elif l1 == 'o':\n",
+        "  print('Vogal')\n",
+        "elif l1 == 'u':\n",
+        "  print('Vogal')\n",
+        "else:\n",
+        "  print('Consoante')"
+      ],
+      "metadata": {
+        "id": "NbgndVyg-zFJ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "dfaf193f-fc54-4493-9017-48fa0c1eed31"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Forneça uma letra: c\n",
+            "Consoante\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 4\n",
+        "Escreva um programa que leia valores médios de preços de um modelo de carro por 3 anos consecutivos e exiba o valor mais alto e mais baixo entre esses três anos."
+      ],
+      "metadata": {
+        "id": "mofMRjSZHP99"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "v1 = int(input('Insira valor medio do primeiro ano: '))\n",
+        "v2 = int(input('Insira valor medio do segundo ano: '))\n",
+        "v3 = int(input('Insira valor medio do terceiro ano: '))\n",
+        "maior = v1\n",
+        "if v2 > maior:\n",
+        "  maior = v2\n",
+        "if v3 > maior:\n",
+        "  maior = v3\n",
+        "menor = v1\n",
+        "if v2 < menor:\n",
+        "  menor = v2\n",
+        "if v3 < menor:\n",
+        "  menor = v3\n",
+        "print(f'O maior valor é {maior}')\n",
+        "print(f'O menor valor é {menor}')\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "TX--d3k9-02c",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "b7d0da49-51a3-43a0-9e37-bc3e51858415"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira valor medio do primeiro ano: 20\n",
+            "Insira valor medio do segundo ano: 10\n",
+            "Insira valor medio do terceiro ano: 40\n",
+            "O maior valor é 40\n",
+            "O menor valor é 10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 5\n",
+        "Escreva um programa que pergunte sobre o preço de três produtos e indique qual é o produto mais barato para comprar."
+      ],
+      "metadata": {
+        "id": "jY5tIwd-HQzc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "p1 = int(input('Insira o valor do produto x: '))\n",
+        "p2 = int(input('Insira o valor do produto y: '))\n",
+        "p3 = int(input('Insira o valor do produto z: '))\n",
+        "if p1<p2 and p1<p3:\n",
+        "  print('O primeiro produto é o mais barato')\n",
+        "if p2<p1 and p2<p3:\n",
+        "  print('O segundo produto é o mais barato')\n",
+        "if p3<p2 and p3<p1:\n",
+        "  print('O terceiro produto é o mais barato')"
+      ],
+      "metadata": {
+        "id": "sYqNh9df-0gk",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c3fe5839-df3c-4fc3-cea8-48e7ef1e984d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira o valor do produto x: 10\n",
+            "Insira o valor do produto y: 20\n",
+            "Insira o valor do produto z: 50\n",
+            "O primeiro produto é o mais barato\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 6\n",
+        "Escreva um programa que leia três números e os exiba em ordem decrescente."
+      ],
+      "metadata": {
+        "id": "1r6aVxtTHR4E"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input('Insira o valor x: '))\n",
+        "n2 = int(input('Insira o valor y: '))\n",
+        "n3 = int(input('Insira o valor z: '))\n",
+        "if n1>=n2 and n1>=n3:\n",
+        "  print(n1)\n",
+        "  if n2>=n3:\n",
+        "    print(f'{n2}\\n{n3}')\n",
+        "  else:\n",
+        "    print(f'{n3}\\n{n2}')\n",
+        "elif n2>=n1 and n2>=n3:\n",
+        "  print(n2)\n",
+        "  if n1>=n3:\n",
+        "    print(f'{n1}\\n{n3}')\n",
+        "  else:\n",
+        "    print(f'{n3}\\n{n1}')\n",
+        "else:\n",
+        "   print(n3)\n",
+        "   if n2>=n1:\n",
+        "    print(f'{n2}\\n{n1}')\n",
+        "   else:\n",
+        "    print(f'{n1}\\n{n2}')"
+      ],
+      "metadata": {
+        "id": "ydOCYUMO-0Hk",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "e1db085a-eb8b-4fb2-ff6b-24cc8de47d80"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira o valor x: 2\n",
+            "Insira o valor y: 3\n",
+            "Insira o valor z: 1\n",
+            "3\n",
+            "2\n",
+            "1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 7\n",
+        "Escreva um programa que pergunte em qual turno a pessoa usuária estuda (\"manhã\", \"tarde\" ou \"noite\") e exiba a mensagem \"Bom Dia!\", \"Boa Tarde!\", \"Boa Noite!\", ou \"Valor Inválido!\", conforme o caso."
+      ],
+      "metadata": {
+        "id": "inW3F-hAHS_X"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "turno = input('Você trabalha no turno da manhã, tarde ou noite? ')\n",
+        "if turno == 'manhã':\n",
+        "  print('Bom dia!')\n",
+        "elif turno == 'tarde':\n",
+        "  print('Boa tarde!')\n",
+        "elif turno == 'noite':\n",
+        "  print('Boa noite!')\n",
+        "else:\n",
+        "  print('Valor Inválido!')"
+      ],
+      "metadata": {
+        "id": "-_q-Pcr_-zth",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f5fb0903-5b60-4fea-ff59-9daecd64333f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Você trabalha no turno da manhã, tarde ou noite? 2\n",
+            "Valor Inválido!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 8\n",
+        "Escreva um programa que peça um número inteiro à pessoa usuária e determine se ele é par ou ímpar. Dica: Você pode utilizar o operador módulo `%`."
+      ],
+      "metadata": {
+        "id": "NCCPF3QqHTw-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input('Insira um número: '))\n",
+        "if n % 2 == 0:\n",
+        "  print('Par')\n",
+        "else:\n",
+        "  print('Ímpar')"
+      ],
+      "metadata": {
+        "id": "OmZJt1nQ-3e6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "2fcb96c6-ca34-4a8b-f955-bdaae179ad53"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira um número: 4\n",
+            "Par\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 9\n",
+        "Escreva um programa que peça um número à pessoa usuária e informe se ele é inteiro ou decimal."
+      ],
+      "metadata": {
+        "id": "h93Ck1tQHUwE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = float(input('Insira um número: '))\n",
+        "if n % 1 == 0:\n",
+        "  print('Inteiro')\n",
+        "else:\n",
+        "  print('Decimal')"
+      ],
+      "metadata": {
+        "id": "sLMlZcx8-20N",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f273d5fe-46da-48a0-b968-c30ac02fa448"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira um número: 1.3\n",
+            "Decimal\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Momento dos projetos"
+      ],
+      "metadata": {
+        "id": "bKdXSK1SH_pF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "INtl8nelcW61"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 10\n",
+        "Um programa deve ser escrito para ler dois números e, em seguida, perguntar à pessoa usuária qual operação ele deseja realizar. O resultado da operação deve incluir informações sobre o número - se é par ou ímpar, positivo ou negativo e inteiro ou decimal."
+      ],
+      "metadata": {
+        "id": "WBlEyyzsHV86"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = float(input('Insira um número: '))\n",
+        "n2 = float(input('Insira outro número: '))\n",
+        "operacao = input('Qual operação você deseja fazer? [soma, subtração, multiplicação, divisão, potenciação] ')\n",
+        "if operacao == 'soma':\n",
+        "  resultado = n1 + n2\n",
+        "  print(resultado)\n",
+        "elif operacao == 'subtração':\n",
+        "  resultado = n1 - n2\n",
+        "  print(resultado)\n",
+        "elif operacao == 'multiplicação':\n",
+        "  resultado = n1 * n2\n",
+        "  print(resultado)\n",
+        "elif operacao == 'divisão':\n",
+        "  resultado = n1/n2\n",
+        "  print(resultado)\n",
+        "elif operacao == 'potenciação':\n",
+        "  resultado = n1 ** n2\n",
+        "  print(resultado)\n",
+        "else:\n",
+        "  print('Operação inválida')\n",
+        "if resultado % 2 == 0:\n",
+        "  print('Número Par')\n",
+        "else:\n",
+        "  print('Número Ímpar')\n",
+        "if resultado >=0:\n",
+        "  print('Número positivo')\n",
+        "else:\n",
+        "  print('Número negativo')\n",
+        "if resultado % 1 == 0:\n",
+        "  print('Número Inteiro')\n",
+        "else:\n",
+        "  print('Número Decimal')"
+      ],
+      "metadata": {
+        "id": "3jmahZ0f-2gq",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "cadb9423-971d-4f85-cd62-6116ad258d29"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira um número: 10\n",
+            "Insira outro número: 9\n",
+            "Qual operação você deseja fazer? [soma, subtração, multiplicação, divisão, potenciação] multiplicação\n",
+            "90.0\n",
+            "Número Par\n",
+            "Número positivo\n",
+            "Número Inteiro\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 11\n",
+        "Escreva um programa que peça à pessoa usuária três números que representam os lados de um triângulo. O programa deve informar se os valores podem ser utilizados para formar um triângulo e, caso afirmativo, se ele é equilátero, isósceles ou escaleno. Tenha em mente algumas dicas:\n",
+        "- Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;\n",
+        "- Triângulo Equilátero: três lados iguais;\n",
+        "- Triângulo Isósceles: quaisquer dois lados iguais;\n",
+        "- Triângulo Escaleno: três lados diferentes;\n"
+      ],
+      "metadata": {
+        "id": "VdnlULxHHW19"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "l1 = float(input('Insira o primeiro lado: '))\n",
+        "l2 = float(input('Insira o segundo lado: '))\n",
+        "l3 = float(input('Insira o terceiro lado: '))\n",
+        "if l1+l2>l3 or l1+l3>l2 or l2+l3>l1:\n",
+        "  if l1==l2==l3:\n",
+        "    print('O triângulo é equilátero')\n",
+        "  elif l1==l2!=l3 or l2==l3!=l1 or l1==l3!=l2:\n",
+        "    print('O triângulo é Isóceles')\n",
+        "  else:\n",
+        "    print('O triângulo é Escaleno')\n",
+        "else:\n",
+        "  print('Não é um triângulo')"
+      ],
+      "metadata": {
+        "id": "0z73sqUO-2Pw",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6f83854c-7e51-4e20-a324-711156dbf2e3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira o primeiro lado: -10\n",
+            "Insira o segundo lado: -10\n",
+            "Insira o terceiro lado: -10\n",
+            "Não é um triângulo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 12\n",
+        "Um estabelecimento está vendendo combustíveis com descontos variados. Para o etanol, se a quantidade comprada for até 15 litros, o desconto será de 2% por litro. Caso contrário, será de 4% por litro. Para o diesel, se a quantidade comprada for até 15 litros, o desconto será de 3% por litro. Caso contrário, será de 5% por litro. O preço do litro de diesel é R\\$ 2,00 e o preço do litro de etanol é R\\$ 1,70. Escreva um programa que leia a quantidade de litros vendidos e o tipo de combustível (E para etanol e D para diesel) e calcule o valor a ser pago pelo cliente. Tenha em mente algumas dicas:\n",
+        "\n",
+        "- O do valor do desconto será a multiplicação entre preço do litro, quantidade de litros e o valor do desconto.\n",
+        "- O valor a ser pago por um cliente será o resultado da multiplicação do preço do litro pela quantidade de litros menos o valor de desconto resultante do cálculo.\n"
+      ],
+      "metadata": {
+        "id": "_PpEpOugHXwZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "litros = int(input('Quantos litros foram vendidos? '))\n",
+        "tipo = input('Etanol ou Diesel? ')\n",
+        "if tipo.upper() == 'ETANOL':\n",
+        "  if litros <= 15:\n",
+        "    disconto = 2 * litros * 0.02\n",
+        "    E = 2 * litros - disconto\n",
+        "    print(f'O valor total é de: {E}')\n",
+        "  else:\n",
+        "    disconto = 2 * litros * 0.04\n",
+        "    E = 2 * litros - disconto\n",
+        "    print(f'O valor total é de: {E}')\n",
+        "elif tipo.upper() == 'DIESEL':\n",
+        "  if litros <= 15:\n",
+        "    disconto = 1.7 * litros * 0.03\n",
+        "    D = 1.7 * litros - disconto\n",
+        "    print(f'O valor total é de: {D}')\n",
+        "  else:\n",
+        "    disconto = 1.7 * litros * 0.05\n",
+        "    D = 1.7 * litros - disconto\n",
+        "    print(f'O valor total é de: {D}')\n",
+        "else: print('Valores inválidos')\n"
+      ],
+      "metadata": {
+        "id": "9izoF-0O-1yD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f2c3eaa2-7da0-4406-d0b7-c5f08a2d0e48"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Quantos litros foram vendidos? 10\n",
+            "Etanol ou Diesel? dIeSeL\n",
+            "O valor total é de: 16.49\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 13\n",
+        "Em uma empresa de venda de imóveis você precisa criar um código que analise os dados de vendas anuais para ajudar a diretoria na tomada de decisão. O código precisa coletar os dados de quantidade de venda durante os anos de 2022 e 2023 e fazer um cálculo de variação percentual. A partir do valor da variação, deve ser enviada às seguintes sugestões:\n",
+        "- Para variação acima de 20%: bonificação para o time de vendas.\n",
+        "- Para variação entre 2% e 20%: pequena bonificação para time de vendas.\n",
+        "- Para variação entre 2% e -10%: planejamento de políticas de incentivo às vendas.\n",
+        "- Para bonificações abaixo de -10%: corte de gastos.\n"
+      ],
+      "metadata": {
+        "id": "s_XS_D1WHY2R"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "ano_1 = int(input('Insira o valor de vendas de 2022: '))\n",
+        "ano_2 = int(input('Insira o valor de vendas de 2023: '))\n",
+        "porcentual = 100 * (ano_2 - ano_1)/ano_1\n",
+        "if porcentual > 20:\n",
+        "  print('Bonificação para o time de vendas!')\n",
+        "elif 2<=porcentual<=20:\n",
+        "  print('Pequena bonificação para o time de vendas')\n",
+        "elif -10<=porcentual<2:\n",
+        "  print('Planejamento de políticas de incentivo às vendas')\n",
+        "else:\n",
+        "  print('Corte de gastos')\n"
+      ],
+      "metadata": {
+        "id": "avQrYlUg-w8f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6ca57c89-390b-4f52-a364-0e207cccc9b2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira o valor de vendas de 2022: 100\n",
+            "Insira o valor de vendas de 2023: 110\n",
+            "Pequena bonificação para o time de vendas\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 4 - Estruturas de repetição"
+      ],
+      "metadata": {
+        "id": "AuaWh4-d2Itt"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Aquecendo na programação"
+      ],
+      "metadata": {
+        "id": "6MSqU0sIJRdD"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 1\n",
+        "Escreva um programa que peça dois números inteiros e imprima todos os números inteiros entre eles."
+      ],
+      "metadata": {
+        "id": "9eGGyCnAJRdQ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n1 = int(input('Primeiro número inteiro: '))\n",
+        "n2 = int(input('Segundo número inteiro: '))\n",
+        "if n1 > n2:\n",
+        "  for n in range(n2 + 1, n1):\n",
+        "    print(n)\n",
+        "    n2 += 1\n",
+        "elif n2 > n1:\n",
+        "  for n in range(n1 + 1, n2):\n",
+        "    print(n)\n",
+        "    n1 += 1\n",
+        "else:\n",
+        "  print('Os números são iguais')"
+      ],
+      "metadata": {
+        "id": "ID1oc1hxJRdQ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "7136224c-acd9-4ca3-82c7-dff294058e93"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Primeiro número inteiro: 10\n",
+            "Segundo número inteiro: 10\n",
+            "Os números são iguais\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 2\n",
+        "Escreva um programa para calcular quantos dias levará para a colônia de uma bactéria A ultrapassar ou igualar a colônia de uma bactéria B, com base nas taxas de crescimento de 3% e 1,5% respectivamente. Considere que a colônia A inicia com 4 elementos e a colônia B com 10 elementos."
+      ],
+      "metadata": {
+        "id": "mGonEHYCJRdR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "A = 4\n",
+        "B = 10\n",
+        "dias = 0\n",
+        "while A < B:\n",
+        "  A *= 1.03\n",
+        "  B *= 1.015\n",
+        "  dias += 1\n",
+        "print(f'Levará {dias} dias')"
+      ],
+      "metadata": {
+        "id": "wM6FJuoqJRdR",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0acf91ec-6da4-438d-e94c-13c6af9e75ea"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Levará 63 dias\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 3\n",
+        "Para tratar uma quantidade de 15 dados de avaliações de pessoas usuárias de um serviço da empresa, precisamos verificar se as notas são válidas. Então, escreva um programa que vai receber a nota de 0 a 5 de todos os dados e verificar se é um valor válido. Caso seja inserido uma nota acima de 5 ou abaixo de 0, repita até que a pessoa usuária insira um valor válido."
+      ],
+      "metadata": {
+        "id": "UiOZRlqoJRdR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for n in range(15):\n",
+        "  dado = int(input('Insira sua avaliação: '))\n",
+        "  while dado < 0 or dado > 5:\n",
+        "    dado = int(input('Nota inválida, insira novamente: '))\n",
+        "print('Todos os valores validados.')\n"
+      ],
+      "metadata": {
+        "id": "3TUAhCxcJRdR",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1625faf8-027e-4368-e482-db0d4b17d5c2"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira sua avaliação: 1\n",
+            "Insira sua avaliação: 2\n",
+            "Insira sua avaliação: 5\n",
+            "Insira sua avaliação: 1\n",
+            "Insira sua avaliação: 4\n",
+            "Insira sua avaliação: 10\n",
+            "Nota inválida, insira novamente: 2\n",
+            "Insira sua avaliação: 4\n",
+            "Insira sua avaliação: 5\n",
+            "Insira sua avaliação: 6\n",
+            "Nota inválida, insira novamente: 3\n",
+            "Insira sua avaliação: 2\n",
+            "Insira sua avaliação: 2\n",
+            "Insira sua avaliação: 3\n",
+            "Insira sua avaliação: 1\n",
+            "Insira sua avaliação: 0\n",
+            "Insira sua avaliação: 5\n",
+            "Todos os valores validados.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 4\n",
+        "Desenvolva um programa que leia um conjunto indeterminado de temperaturas em Celsius e faça uma análise. Portanto, escreva um programa que leia temperaturas e informe a média delas. A leitura deve ser encerrada ao ser enviado o valor -273°C."
+      ],
+      "metadata": {
+        "id": "ABv3KObGJRdR"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "temp = float(input('Insira a temperatura: '))\n",
+        "total = 0\n",
+        "contador = 0\n",
+        "while temp != -273:\n",
+        "  total += temp\n",
+        "  contador += 1\n",
+        "  temp = float(input('Insira a temperatura: '))\n",
+        "media = total / contador\n",
+        "print(f'A média das temperaturas foi de {media}')"
+      ],
+      "metadata": {
+        "id": "85tBBj5KJRdS",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "212c0088-ba47-47a0-983f-9ffb02008a6a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira a temperatura: 10\n",
+            "Insira a temperatura: 41\n",
+            "Insira a temperatura: 41.5\n",
+            "Insira a temperatura: 230\n",
+            "Insira a temperatura: -5\n",
+            "Insira a temperatura: -15\n",
+            "Insira a temperatura: -273\n",
+            "A média das temperaturas foi de 50.416666666666664\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 5\n",
+        "Escreva um programa que calcule o fatorial de um número inteiro fornecido pela pessoa usuária. O fatorial de um número inteiro é a multiplicação desse número por todos os seus antecessores até o número 1. Por exemplo, o fatorial de 5 é 5 x 4 x 3 x 2 x 1 = 120."
+      ],
+      "metadata": {
+        "id": "IjkbAfGcJRdS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input('Insira um número: '))\n",
+        "while num < 0:\n",
+        "  num = int(input('Número inválido, insira um outro número: '))\n",
+        "for n in range(1, num):\n",
+        "  num *= n\n",
+        "print(num)\n"
+      ],
+      "metadata": {
+        "id": "7RTH8o0HJRdS",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "80310fa5-1c40-4150-ad86-960d8426a388"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira um número: 5\n",
+            "120\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Momento dos projetos"
+      ],
+      "metadata": {
+        "id": "oGNKuQjsJRdT"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 6\n",
+        "Escreva um programa que gere a tabuada de um número inteiro de 1 a 10, de acordo com a escolha da pessoa usuária. Como exemplo, para o número 2, a tabuada deve ser mostrada no seguinte formato:\n",
+        "```\n",
+        "Tabuada do 2:\n",
+        "2 x 1 = 2\n",
+        "2 x 2 = 4\n",
+        "[...]\n",
+        "2 x 10 = 20\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "ODxaTUYmJRdS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numero = int(input('Insira um número de 1 a 10: '))\n",
+        "while numero < 1 or numero > 10:\n",
+        "  numero = int(input('Numero inválido, insira novamente: '))\n",
+        "for n in range(1, 11):\n",
+        "  multi = numero * n\n",
+        "  print(f'{numero} x {n} = {multi}')\n"
+      ],
+      "metadata": {
+        "id": "lkTlbxPIJRdS",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "80986309-d61b-489b-c7a2-d5604ab08811"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira um número de 1 a 10: 2\n",
+            "2 x 1 = 2\n",
+            "2 x 2 = 4\n",
+            "2 x 3 = 6\n",
+            "2 x 4 = 8\n",
+            "2 x 5 = 10\n",
+            "2 x 6 = 12\n",
+            "2 x 7 = 14\n",
+            "2 x 8 = 16\n",
+            "2 x 9 = 18\n",
+            "2 x 10 = 20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 7\n",
+        "Os números primos possuem várias aplicações dentro da Ciência de Dados, por exemplo, na criptografia e segurança. Um número primo é aquele que é divisível apenas por um e por ele mesmo. Faça um programa que peça um número inteiro e determine se ele é ou não um número primo."
+      ],
+      "metadata": {
+        "id": "LeIbnt8VJRdS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input('Insira um número: '))\n",
+        "primo = True\n",
+        "if num <=1:\n",
+        "  primo = False\n",
+        "else:\n",
+        "  for n in range(2, num):\n",
+        "    if num % n == 0:\n",
+        "      primo = False\n",
+        "      break\n",
+        "    else:\n",
+        "      primo = True\n",
+        "if primo == False:\n",
+        "  print(f'{num} não é um número primo.')\n",
+        "else:\n",
+        "  print(f'{num} é um número primo.')\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "2rcNU7twJRdS",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "febe77ab-e516-47fe-ed64-8f2336bc558e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira um número: 2\n",
+            "2 é um número primo.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 8\n",
+        "Vamos entender a distribuição de idades de pensionistas de uma empresa de previdência. Escreva um programa que leia as idades de uma quantidade não informada de clientes e mostre a distribuição em intervalos de [0-25], [26-50], [51-75] e [76-100]. Encerre a entrada de dados com um número negativo."
+      ],
+      "metadata": {
+        "id": "QTwb6QaCJRdT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "contador1 = 0\n",
+        "contador2 = 0\n",
+        "contador3 = 0\n",
+        "contador4 = 0\n",
+        "while True:\n",
+        "  idade = int(input('Insira a idade, ou um número negativo para encerrar: '))\n",
+        "  while idade > 100:\n",
+        "    int(input('Valor inválido, insira novamente, ou um número negativo para encerrar: '))\n",
+        "  if idade >= 0 and idade <= 25:\n",
+        "    contador1 +=1\n",
+        "  elif idade >= 26 and idade <= 50:\n",
+        "    contador2 +=1\n",
+        "  elif idade >= 51 and idade <= 75:\n",
+        "    contador3 +=1\n",
+        "  elif idade >= 76 and idade <= 100:\n",
+        "    contador4 +=1\n",
+        "  else:\n",
+        "    break\n",
+        "print(f'[0-25]: {contador1}')\n",
+        "print(f'[26-50]: {contador2}')\n",
+        "print(f'[51-75]: {contador3}')\n",
+        "print(f'[51-75]: {contador4}')\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "4IAhaDmYJRdT",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "0a1149a8-24e2-4d69-c298-cea9f89d68ca"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira a idade, ou um número negativo para encerrar: 20\n",
+            "Insira a idade, ou um número negativo para encerrar: 40\n",
+            "Insira a idade, ou um número negativo para encerrar: 50\n",
+            "Insira a idade, ou um número negativo para encerrar: 75\n",
+            "Insira a idade, ou um número negativo para encerrar: 76\n",
+            "Insira a idade, ou um número negativo para encerrar: 100\n",
+            "Insira a idade, ou um número negativo para encerrar: -1\n",
+            "[0-25]: 1\n",
+            "[26-50]: 2\n",
+            "[51-75]: 1\n",
+            "[51-75]: 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 9\n",
+        "Em uma eleição para gerência em uma empresa com 20 funcionários, existem quatro candidatos. Escreva um programa que calcule o vencedor da eleição. A votação ocorreu da seguinte maneira:\n",
+        "- Cada funcionário votou em um dos quatro candidatos (representados pelos números 1, 2, 3 e 4).\n",
+        "- Também foram contabilizados os votos nulos (representado pelo número 5) e os votos em branco (representado pelo número 6).\n",
+        "\n",
+        "Ao final da votação, o programa deve exibir o total de votos para cada candidato, o número de votos nulos e o número de votos em branco. Além disso, deve calcular e exibir a porcentagem de votos nulos em relação ao total de votos e a porcentagem de votos em branco em relação ao total de votos."
+      ],
+      "metadata": {
+        "id": "soJCQVwRJRdT"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "candidato1 = 0\n",
+        "candidato2 = 0\n",
+        "candidato3 = 0\n",
+        "candidato4 = 0\n",
+        "nulo = 0\n",
+        "branco = 0\n",
+        "for n in range(20):\n",
+        "  voto = int(input('Informe seu voto: '))\n",
+        "  while voto < 1 or voto > 6:\n",
+        "    voto = int(input('Informe seu voto novamente: '))\n",
+        "  if voto == 1:\n",
+        "    candidato1 +=1\n",
+        "  elif voto == 2:\n",
+        "    candidato2 +=1\n",
+        "  elif voto == 3:\n",
+        "    candidato3 +=1\n",
+        "  elif voto == 4:\n",
+        "    candidato4 +=1\n",
+        "  elif voto == 5:\n",
+        "    nulo +=1\n",
+        "  elif voto == 6:\n",
+        "    branco +=1\n",
+        "print(f'Número de votos do candidato 1: {candidato1}')\n",
+        "print(f'Número de votos do candidato 2: {candidato2}')\n",
+        "print(f'Número de votos do candidato 3: {candidato3}')\n",
+        "print(f'Número de votos do candidato 4: {candidato4}')\n",
+        "print(f'Número de votos nulos: {nulo}')\n",
+        "print(f'Número de votos em brancos: {branco}')\n",
+        "nulo_votos = (100*nulo)/20\n",
+        "print(f'{nulo_votos}% dos votos foram nulos')\n",
+        "branco_votos = (100*branco)/20\n",
+        "print(f'{branco_votos}% dos votos foram em branco')"
+      ],
+      "metadata": {
+        "id": "041EFrgG-4gR",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d5b841f3-8d67-44a4-d83e-592d2c73adfb"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Informe seu voto: 1\n",
+            "Informe seu voto: 4\n",
+            "Informe seu voto: 3\n",
+            "Informe seu voto: 3\n",
+            "Informe seu voto: 2\n",
+            "Informe seu voto: 4\n",
+            "Informe seu voto: 12\n",
+            "Informe seu voto novamente: 1\n",
+            "Informe seu voto: 2\n",
+            "Informe seu voto: 4\n",
+            "Informe seu voto: 2\n",
+            "Informe seu voto: 3\n",
+            "Informe seu voto: 2\n",
+            "Informe seu voto: 4\n",
+            "Informe seu voto: 6\n",
+            "Informe seu voto: 6\n",
+            "Informe seu voto: 5\n",
+            "Informe seu voto: 5\n",
+            "Informe seu voto: 5\n",
+            "Informe seu voto: 6\n",
+            "Informe seu voto: 3\n",
+            "Número de votos do candidato 1: 2\n",
+            "Número de votos do candidato 2: 4\n",
+            "Número de votos do candidato 3: 4\n",
+            "Número de votos do candidato 4: 4\n",
+            "Número de votos nulos: 3\n",
+            "Número de votos em brancos: 3\n",
+            "15.0% dos votos foram nulos\n",
+            "15.0% dos votos foram em branco\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## Aula 5 - Estruturas de dados"
+      ],
+      "metadata": {
+        "id": "eijHQiNU2IZ7"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Aquecendo na programação"
+      ],
+      "metadata": {
+        "id": "92F0bKtBMgd7"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 1\n",
+        "Faça um programa que tenha a seguinte lista contendo os valores de gastos de uma empresa de papel `[2172.54, 3701.35, 3518.09, 3456.61, 3249.38, 2840.82, 3891.45, 3075.26, 2317.64, 3219.08]`. Com esses valores, faça um programa que calcule a média de gastos. Dica, use as funções built-in [`sum()`](https://docs.python.org/3/library/functions.html#sum) e [`len()`](https://docs.python.org/3/library/functions.html#len)."
+      ],
+      "metadata": {
+        "id": "IypX2ANuMgeC"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "gastos = [2172.54, 3701.35, 3518.09, 3456.61, 3249.38, 2840.82, 3891.45, 3075.26, 2317.64, 3219.08]\n",
+        "media = sum(gastos)/len(gastos)\n",
+        "media"
+      ],
+      "metadata": {
+        "id": "ge3LuFhLMgeD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "aa9aab53-d57a-40bb-ea3e-9b6e6305aeae"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3144.222"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 1
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 2\n",
+        " Com os mesmos dados da questão anterior, defina quantas compras foram acima de 3000 reais e calcule a porcentagem quanto ao total de compras."
+      ],
+      "metadata": {
+        "id": "xrOeLhQkMgeD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "contador = 0\n",
+        "for e in gastos:\n",
+        "  if e > 3000:\n",
+        "    contador +=1\n",
+        "porcent = (contador/len(gastos)) * 100\n",
+        "print(f'{porcent}%')\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "Ygu5TMZyMgeD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f447b608-4e6b-4a94-ca3b-a657dc8c9dce"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "70.0%\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 3\n",
+        "Faça um código que colete em uma lista 5 números inteiros quaisquer e imprima a lista. Exemplo: `[1,4,7,2,4]`."
+      ],
+      "metadata": {
+        "id": "JgCOrE_BMgeD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_numeros = []\n",
+        "for n in range(5):\n",
+        "  numero = int(input('Digite um número: '))\n",
+        "  lista_numeros.append(numero)\n",
+        "lista_numeros"
+      ],
+      "metadata": {
+        "id": "vtM9O1hLMgeD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4299d206-4a17-4838-a191-de92b5436c58"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Digite um número: 1\n",
+            "Digite um número: 4\n",
+            "Digite um número: 7\n",
+            "Digite um número: 2\n",
+            "Digite um número: 4\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 4, 7, 2, 4]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 4\n",
+        "Colete novamente 5 inteiros e imprima a lista em ordem inversa à enviada."
+      ],
+      "metadata": {
+        "id": "p3bTp88HMgeD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lista_numeros = []\n",
+        "for n in range(5):\n",
+        "  numero = int(input('Digite um número: '))\n",
+        "  lista_numeros.append(numero)\n",
+        "lista_numeros.reverse\n",
+        "lista_numeros"
+      ],
+      "metadata": {
+        "id": "-CGwMIyHMgeD",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a0775203-1890-42e3-a3aa-b5d4bc53bd03"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Digite um número: 10\n",
+            "Digite um número: 40\n",
+            "Digite um número: 20\n",
+            "Digite um número: 40\n",
+            "Digite um número: 10\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[10, 40, 20, 40, 10]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 21
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 5\n",
+        "Faça um programa que, ao inserir um número qualquer, criará uma lista contendo todos os números primos entre 1 e o número digitado."
+      ],
+      "metadata": {
+        "id": "eIXd_z1lMgeD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = int(input('Digite um número: '))\n",
+        "lista = []\n",
+        "primo = True\n",
+        "for n in range(1, num):\n",
+        "  for e in range(1,num):\n",
+        "    if n / e == n or n / e == 1:\n",
+        "      primo = True\n",
+        "    else:\n",
+        "      primo = False\n",
+        "    if primo == True:\n",
+        "      lista.append(n)\n",
+        "lista\n"
+      ],
+      "metadata": {
+        "id": "rj_6GHstMgeE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "44af21fd-df25-4e51-8ef9-abb86d9f6107"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Digite um número: 10\n"
+          ]
+        },
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 20
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 6\n",
+        "Escreva um programa que peça uma data informando o dia, mês e ano e determine se ela é uma data válida para uma análise."
+      ],
+      "metadata": {
+        "id": "zrbz3ENlMgeE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dia = int(input('Informe o dia: '))\n",
+        "mes = int(input('Informe o mes: '))\n",
+        "ano = int(input('Informe o ano: '))\n",
+        "if dia < 1 or dia > 31:\n",
+        "  analise = False\n",
+        "elif mes < 1 or mes > 12:\n",
+        "  analise = False\n",
+        "elif ano < 1 or ano > 2026:\n",
+        "  analise = False\n",
+        "else:\n",
+        "  analise = True\n",
+        "if analise == True:\n",
+        "  print('Data válida.')\n",
+        "else:\n",
+        "  print('Data inválida.')"
+      ],
+      "metadata": {
+        "id": "0eYA8UjTMgeE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ddbeea1f-2cf1-4e0a-c83d-f2b2175235ef"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Informe o dia: 20\n",
+            "Informe o mes: 10\n",
+            "Informe o ano: 2020\n",
+            "Data válida.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "### Momento dos projetos"
+      ],
+      "metadata": {
+        "id": "ut_4VHdGMgeE"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 7\n",
+        "Para um estudo envolvendo o nível de multiplicação de bactérias em uma colônia, foi coletado o número de bactérias multiplicadas por dia, com base em um processo de duplicação diária e pode ser observado a seguir: `[1.2, 2.1, 3.3, 5.0, 7.8, 11.3, 16.6, 25.1, 37.8, 56.9]`. Tendo esses valores, faça um código que gere uma lista contendo o percentual de crescimento de bactérias por dia, comparando o número de bactérias em cada dia com o número de bactérias do dia anterior. Dica: para calcular o percentual de crescimento usamos a seguinte equação: `100 * (amostra_atual - amostra_passada) / (amostra_passada)`."
+      ],
+      "metadata": {
+        "id": "G86Z0vD_MgeE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "bact = [1.2, 2.1, 3.3, 5.0, 7.8, 11.3, 16.6, 25.1, 37.8, 56.9]\n",
+        "percentuais = []\n",
+        "for i in range(1, len(bact)):\n",
+        "  porc = round(100 * (bact[i] - bact[i-1]) / bact[i-1], 2)\n",
+        "  percentuais.append(porc)\n",
+        "percentuais"
+      ],
+      "metadata": {
+        "id": "PXNO_CFkMgeE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "c4498ef3-ab5e-4a5c-da41-3d89de85b363"
+      },
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[75.0, 57.14, 51.52, 56.0, 44.87, 46.9, 51.2, 50.6, 50.53]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 8\n",
+        "Para uma seleção de produtos alimentícios, precisamos separar o conjunto de IDs dados por números inteiros, sabendo que os produtos com ID par são doces e os com ID ímpar são amargos. Monte um código que colete 10 IDs. Depois, calcule e mostre a quantidade de produtos doces e amargos."
+      ],
+      "metadata": {
+        "id": "p4nxogpnMgeE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "amargo = []\n",
+        "doce = []\n",
+        "for n in range(10):\n",
+        "  id = int(input('Insira o ID: '))\n",
+        "  if id % 2 == 0:\n",
+        "    doce.append(id)\n",
+        "  else:\n",
+        "    amargo.append(id)\n",
+        "print(f'Quantidade de amargos:', {len(amargo)}, '. Quantidade de doces:', {len(doce)})"
+      ],
+      "metadata": {
+        "id": "WqjO2SZkMgeE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "ffd3b99e-79a0-487d-c048-6e860c0720f4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira o ID: 20\n",
+            "Insira o ID: 140\n",
+            "Insira o ID: 3\n",
+            "Insira o ID: 10\n",
+            "Insira o ID: 40\n",
+            "Insira o ID: 50\n",
+            "Insira o ID: 10\n",
+            "Insira o ID: 20\n",
+            "Insira o ID: 13\n",
+            "Insira o ID: 10\n",
+            "Quantidade de amargos: {2} . Quantidade de doces: {8}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 9\n",
+        "Desenvolva um programa que informa a nota de um aluno de acordo com suas respostas. Ele deve pedir a resposta de um aluno para cada questão e é preciso verificar se a resposta foi igual ao gabarito. Cada questão vale um ponto e existem alternativas:  A, B, C ou D.\n",
+        "```\n",
+        "Gabarito da Prova:\n",
+        "01 - D\n",
+        "02 - A\n",
+        "03 - C\n",
+        "04 - B\n",
+        "05 - A\n",
+        "06 - D\n",
+        "07 - C\n",
+        "08 - C\n",
+        "09 - A\n",
+        "10 - B\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "t5OrLxV6MgeE"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "gabarito = ['D', 'A', 'C', 'B', 'A', 'D', 'C', 'C', 'A', 'B']\n",
+        "contador = 0\n",
+        "for nota in gabarito:\n",
+        "  resp = input('Insira a resposta da questão: ')\n",
+        "  if resp == nota:\n",
+        "    contador += 1\n",
+        "print(f'Nota:{contador}')\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "ytIQDJrQMgeE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8238255e-e3ea-432a-abe9-17755c6563e1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira a resposta da questãoD\n",
+            "Insira a resposta da questãoA\n",
+            "Insira a resposta da questãoC\n",
+            "Insira a resposta da questãoB\n",
+            "Insira a resposta da questãoA\n",
+            "Insira a resposta da questãoD\n",
+            "Insira a resposta da questãoC\n",
+            "Insira a resposta da questãoA\n",
+            "Insira a resposta da questãoA\n",
+            "Insira a resposta da questãoB\n",
+            "Nota:9\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 10\n",
+        "Um instituto de meteorologia deseja fazer um estudo de temperatura média de cada mês do ano. Para isso, você precisa fazer um código que colete e armazene essas temperaturas médias em uma lista. Depois, calcule a média anual das temperaturas e mostre todas as temperaturas acima da média anual, e em que mês elas ocorreram, mostrando os meses por extenso: Janeiro, Fevereiro, etc."
+      ],
+      "metadata": {
+        "id": "aSBMzh-AMgeF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "temps = []\n",
+        "mes_maior = []\n",
+        "meses = ['Janeiro', 'Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro']\n",
+        "for n in range(12):\n",
+        "  temp = float(input('Insira a temperatura: '))\n",
+        "  temps.append(temp)\n",
+        "media = sum(temps)/len(temps)\n",
+        "for e in range(0,12):\n",
+        "  if temps[e] > media:\n",
+        "    mes_maior.append(meses[e])\n",
+        "print(f'A média anual foi dee {media}, e os meses acima da média foram: {mes_maior}')\n"
+      ],
+      "metadata": {
+        "id": "ftj04s2uMgeF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d0ec4da9-5f93-4611-dd9b-1f73eea93b3d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Insira a temperatura: 19\n",
+            "Insira a temperatura: 20\n",
+            "Insira a temperatura: 19\n",
+            "Insira a temperatura: 21.5\n",
+            "Insira a temperatura: 18.5\n",
+            "Insira a temperatura: 29\n",
+            "Insira a temperatura: 19.5\n",
+            "Insira a temperatura: 19.5\n",
+            "Insira a temperatura: 20\n",
+            "Insira a temperatura: 18\n",
+            "Insira a temperatura: 21\n",
+            "Insira a temperatura: 30\n",
+            "A média anual foi dee 21.25, e os meses acima da média foram: ['Abril', 'Junho', 'Dezmbro']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 11\n",
+        "Uma empresa de e-commerce está interessada em analisar as vendas dos seus produtos. Os dados das vendas foram armazenados em um dicionário:\n",
+        "```\n",
+        "{'Produto A': 300, 'Produto B': 80, 'Produto C': 60,\n",
+        " 'Produto D': 200, 'Produto E': 250, 'Produto F': 30}\n",
+        "```\n",
+        "Escreva um código que calcule o total de vendas e o produto mais vendido."
+      ],
+      "metadata": {
+        "id": "0X8S6s4jMgeF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "vendas = {'Produto A': 300, 'Produto B': 80, 'Produto C': 60,\n",
+        " 'Produto D': 200, 'Produto E': 250, 'Produto F': 30}\n",
+        "mais_vendas = 0\n",
+        "for n in vendas.values():\n",
+        "  if n > mais_vendas:\n",
+        "    mais_vendas = n\n",
+        "for c, v in vendas.items():\n",
+        "  if v == mais_vendas:\n",
+        "    produto_mais_vendido = c\n",
+        "soma = sum(vendas.values())\n",
+        "print(f'O total de vendas é {soma} e o produto mais vendido foi o {produto_mais_vendido}')\n"
+      ],
+      "metadata": {
+        "id": "Xa3DJLtFMgeF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d0b746f4-af07-46dd-90be-b25e106a089b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "O total de vendas é 920 e o produto mais vendido foi o Produto A\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 12\n",
+        "Uma pesquisa de mercado foi feita para decidir qual design de uma marca infantil mais agrada crianças. A pesquisa foi feita e o votos computados podem ser observados abaixo:\n",
+        "```\n",
+        "'''\n",
+        "Tabela de votos da marca\n",
+        "Design 1 - 1334 votos\n",
+        "Design 2 - 982 votos\n",
+        "Design 3 - 1751 votos\n",
+        "Design 4 - 210 votos\n",
+        "Design 5 - 1811 votos\n",
+        "'''\n",
+        "```\n",
+        "Adapte os dados fornecidos a você para uma estrutura de dicionário e a partir dele, informe o design vencedor e a porcentagem de votos recebidos.\n"
+      ],
+      "metadata": {
+        "id": "nrEwf_1ZMgeF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "votos = {'Design 1': 1334,\n",
+        "         'Design 2': 982,\n",
+        "         'Design 3': 1751,\n",
+        "         'Design 4': 210,\n",
+        "         'Design 5': 1811}\n",
+        "mais_votos = 0\n",
+        "for n in votos.values():\n",
+        "  if n > mais_votos:\n",
+        "    mais_votos = n\n",
+        "for c,v in votos.items():\n",
+        "  if v == mais_votos:\n",
+        "    vencedor = c\n",
+        "porc = (100*mais_votos)/sum(votos.values())\n",
+        "print(f'O vencedor foi {vencedor}, com uma porcentagem de {porc:.2f} dos votos totais.')"
+      ],
+      "metadata": {
+        "id": "MRPcGR-_MgeF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d45dc73d-20e9-467c-a8b3-22851a04084d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "O vencedor foi Design 5, com uma porcentagem de 29.75 dos votos totais.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 13\n",
+        "Os funcionários de um setor da empresa que você trabalha vão receber um abono correspondente a 10% do seu salário devido ao ótimo desempenho do time. O setor financeiro solicitou sua ajuda para a verificação das consequências financeiras que esse abono irá gerar nos recursos. Assim, foi encaminhada para você uma lista com os salários que receberão o abono: `[1172, 1644, 2617, 5130, 5532, 6341, 6650, 7238, 7685, 7782, 7903]`. O abono de cada funcionário não pode ser inferior a 200. Em código, transforme cada um dos salários em chaves de um dicionário e o abono de cada salário no elemento. Depois, informe o total de gastos com o abono, quantos funcionários receberam o abono mínimo e qual o maior valor de abono fornecido.\n"
+      ],
+      "metadata": {
+        "id": "HRTFFzKIMgeF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "salarios = [1172, 1644, 2617, 5130, 5532, 6341, 6650, 7238, 7685, 7782, 7903]\n",
+        "salarios_abonos = {}\n",
+        "for n in salarios:\n",
+        "  abono = n *0.10\n",
+        "  if abono < 200:\n",
+        "    abono = 200\n",
+        "  salarios_abonos[n] = abono\n",
+        "total_gasto = sum(salarios_abonos.values())\n",
+        "abonos_min = 0\n",
+        "for n in salarios_abonos.values():\n",
+        "  if n == 200:\n",
+        "    abonos_min += 1\n",
+        "abonos_max = max(salarios_abonos.values())\n",
+        "print(f'O total gasto com abonos foi de {total_gasto}, {abonos_min} funcionários receberam o abono mínimo e o maior valor de abono foi {abonos_max}')"
+      ],
+      "metadata": {
+        "id": "QsDSCua42bLB",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "448f4916-5d42-4bfb-e820-b543a1a94919"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "O total gasto com abonos foi de 6087.8, 2 funcionários receberam o abono mínimo e 790.3000000000001 funcionários receberam o abono máximo\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 14\n",
+        "Uma equipe de cientistas de dados está estudando a diversidade biológica em uma floresta. A equipe fez a coleta de informações sobre o número de espécies de plantas e animais em cada área da floresta e armazenaram essas informações em um dicionário. Nele, a chave descreve a área dos dados e os valores nas listas correspondem às espécies de plantas e animais nas áreas, respectivamente.\n",
+        "```\n",
+        "{'Área Norte': [2819, 7236],\n",
+        " 'Área Leste': [1440, 9492],\n",
+        " 'Área Sul': [5969, 7496],\n",
+        " 'Área Oeste': [14446, 49688],\n",
+        " 'Área Centro': [22558, 45148]}\n",
+        "```\n",
+        "Escreva um código para calcular a média de espécies por área e identificar a área com a maior diversidade biológica. Dica: use as funções built-in [`sum()`](https://docs.python.org/3/library/functions.html#sum) e [`len()`](https://docs.python.org/3/library/functions.html#len).\n"
+      ],
+      "metadata": {
+        "id": "6dEXZEwjMlWy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "info = {'Área Norte': [2819, 7236],\n",
+        " 'Área Leste': [1440, 9492],\n",
+        " 'Área Sul': [5969, 7496],\n",
+        " 'Área Oeste': [14446, 49688],\n",
+        " 'Área Centro': [22558, 45148]}\n",
+        "maior_bio = 0\n",
+        "medias = {}\n",
+        "for x, y in info.items():\n",
+        "  media = sum(y)/len(y)\n",
+        "  medias[x] = media\n",
+        "  if media > maior_bio:\n",
+        "    maior_area = x\n",
+        "print(medias, f'A área com maio biodiversidade é a {maior_area}')"
+      ],
+      "metadata": {
+        "id": "eQnOUDfYMlWy",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8c10fe87-c1ee-416d-bd33-32ec0d1053fb"
+      },
+      "execution_count": 28,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'Área Norte': 5027.5, 'Área Leste': 5466.0, 'Área Sul': 6732.5, 'Área Oeste': 32067.0, 'Área Centro': 33853.0} A área com maio biodiversidade é a Área Centro\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "#### Questão 15\n",
+        "O setor de RH da sua empresa te pediu uma ajuda para analisar as idades dos funcionários de 4 setores da empresa. Para isso, ele te forneceu os seguintes dados:\n",
+        "```\n",
+        "{'Setor A': [22, 26, 30, 30, 35, 38, 40, 56, 57, 65],\n",
+        " 'Setor B': [22, 24, 26, 33, 41, 49, 50, 54, 60, 64],\n",
+        " 'Setor C': [23, 26, 26, 29, 34, 35, 36, 41, 52, 56],\n",
+        " 'Setor D': [19, 20, 25, 27, 34, 39, 42, 44, 50, 65]}\n",
+        "```\n",
+        "Sabendo que cada setor tem 10 funcionários, construa um código que calcule a média de idade de cada setor, a idade média geral entre todos os setores e quantas pessoas estão acima da idade média geral.\n"
+      ],
+      "metadata": {
+        "id": "r0RW2Sy_MlWy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "setores = {'Setor A': [22, 26, 30, 30, 35, 38, 40, 56, 57, 65],\n",
+        " 'Setor B': [22, 24, 26, 33, 41, 49, 50, 54, 60, 64],\n",
+        " 'Setor C': [23, 26, 26, 29, 34, 35, 36, 41, 52, 56],\n",
+        " 'Setor D': [19, 20, 25, 27, 34, 39, 42, 44, 50, 65]}\n",
+        "medias = {}\n",
+        "for x, y in setores.items():\n",
+        "  media = sum(y)/len(y)\n",
+        "  medias[x] = media\n",
+        "media_geral = sum(medias.values())/len(medias.values())\n",
+        "acima_geral = 0\n",
+        "for x, y in setores.items():\n",
+        "  for i in y:\n",
+        "    if i > media_geral:\n",
+        "      acima_geral += 1\n",
+        "print(f'Médias por setor: {medias}', f'A média geral foi de {media_geral} e {acima_geral} pessoas estão acima da média geral.')"
+      ],
+      "metadata": {
+        "id": "wCiwyKP3MmTz",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8f08f04b-fb12-4c78-f5b6-3b507c02eb10"
+      },
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Médias por setor: {'Setor A': 39.9, 'Setor B': 42.3, 'Setor C': 35.8, 'Setor D': 36.5} A média geral foi de 38.625 e 18 pessoas estão acima da média geral.\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
